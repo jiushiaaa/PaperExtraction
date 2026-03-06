@@ -22,6 +22,15 @@ build/
 .vscode/
 *.iml
 
+# PaddleOCR 源码（本地参考，勿提交）
+PaddleOCR-main/
+
+# OCR 预处理生成的中间文件
+AMpdf/*.txt
+
+# 安装流程记录
+paddlepaddle安装流程.txt
+
 # 其他
 *.log
 .DS_Store

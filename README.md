@@ -2,7 +2,7 @@
 
 从高熵合金（HEA）领域学术 PDF 中抽取「成分–工艺–性能」结构化数据，输出 JSONL，供下游机器学习或知识库使用。
 
-基于 [LangExtract](https://github.com/google/langextract) ，默认按 **OpenAI 兼容接口** 工作：你可以在 `.env` 中自定义 `API Key / Base URL / Model / 请求参数`（如 `temperature`、`enable_thinking`）。同时保留 Gemini 入口，支持文本清洗、分块抽取、单块超时与解析失败重试，并在 Python 层做去噪过滤（仅保留本文研究材料）。
+采用 **PaddleOCR-VL 1.5 + LangExtract** 双引擎架构：先用 [PaddleOCR-VL 1.5](https://github.com/PaddlePaddle/PaddleOCR)（本地部署）将 PDF 解析为高质量 Markdown 文本（表格自动转 Markdown 表格），裁剪掉 Abstract / Introduction / References 等无关章节后保存为 `.txt`；再由 [LangExtract](https://github.com/google/langextract) 对清洗后的文本执行结构化抽取。默认按 **OpenAI 兼容接口** 调用 LLM，支持 `.env` 自定义 API Key / Base URL / Model。
 
 ---
 
@@ -10,8 +10,9 @@
 
 | 功能 | 说明 |
 |------|------|
+| **PaddleOCR-VL 预处理** | 本地部署 PaddleOCR-VL 1.5（SOTA 文档解析），PDF → Markdown（表格/公式/图表自动识别），裁剪 Abstract / Introduction / References，输出干净 `.txt`，大幅减少 LLM 幻觉 |
 | **开放模型接入** | 支持任意 OpenAI 兼容 API（可直传 model_id）；Gemini 单独保留 |
-| **文本清洗** | 去除出版商声明；在正文后 30% 内截断致谢 / 利益冲突 / 参考文献，节省 Token |
+| **章节裁剪** | 前端裁剪 Abstract / Introduction；后端截断 Acknowledgements / References，仅保留 Experimental → Conclusions 核心正文 |
 | **分块抽取** | 按字符数分块 + 重叠，单块失败可切半重试；单块超时（默认 240s）跳过，不拖死整程 |
 | **结构化输出** | 扁平 Extraction → 按 `material_id` 聚合为 MaterialEntity → 转目标 JSON 模板（`Composition_Info` / `Process_Info` / `Properties_Info`）写入 JSONL |
 | **去噪过滤** | 在 Schema 中增加 `role ∈ {Target, Reference, Other}`，仅保留 `role == 'Target'` 的材料记录（本文作者亲自制备和研究的材料），自动跳过 316L、Ti64 等对比/引用材料。 |
@@ -22,20 +23,28 @@
 
 ```
 AM/
-├── main.py              # 入口：argparse、分块、lx.extract、聚合、写 JSONL（含 role 过滤）
+├── main.py              # 入口：argparse、OCR 预处理、分块、lx.extract、聚合、写 JSONL
+├── ocr_preprocess.py    # PaddleOCR-VL 1.5 预处理（PDF→Markdown→章节裁剪→.txt）
 ├── config_manager.py    # 模型工厂：环境变量驱动（OpenAI 兼容 + Gemini）
 ├── openai_compatible_provider.py  # 本地 OpenAI provider 扩展（支持 extra_body 等）
-├── pdf_utils.py         # PDF 提文本、clean_and_truncate_text、chunk_text
-├── schemas.py           # Pydantic 模型（Element / Property / Processing / MaterialEntity）
-│                        # + build_prompt_description、group_extractions_to_entities、entity_to_target_json / material_entity_to_target_json
-├── .env                 # 本地 API Key
-├── AMpdf/               # 待处理 PDF，程序扫描该目录下 *.pdf
+├── pdf_utils.py         # PDF 提文本（PyMuPDF 备选）、clean_and_truncate_text、chunk_text
+├── schemas.py           # Pydantic 模型 + Prompt + 聚合 + 转目标 JSON
+├── .env                 # 本地 API Key + 模型配置
+├── AMpdf/               # 待处理 PDF（及 OCR 生成的 .txt）
 ├── output/              # 输出 he_data_{model}.jsonl
 ├── requirements.txt     # 依赖
 └── README.md            # 本文件
 ```
 
 可选：仓库内可含 `langextract-main/` 作为 LangExtract 子模块或本地参考，运行时不依赖该目录。
+
+### 处理流程
+
+```
+PDF ──► PaddleOCR-VL 1.5（本地）──► Markdown（表格/公式/图表自动识别）
+    ──► 裁剪 Abstract / Introduction / References ──► .txt
+    ──► 手动分块 ──► LangExtract 逐块抽取 ──► 聚合 MaterialEntity ──► JSONL
+```
 
 ---
 
@@ -51,6 +60,14 @@ AM/
 ```bash
 git clone https://github.com/jiushiaaa/langextract-AM.git
 cd AM
+
+# 1. 安装 PaddlePaddle（PaddleOCR 底层框架）
+#    GPU 版（推荐，需匹配 CUDA 版本，详见 https://www.paddlepaddle.org.cn/install/quick）：
+pip install paddlepaddle-gpu
+#    CPU 版：
+# pip install paddlepaddle
+
+# 2. 安装项目依赖（含 PaddleOCR + LangExtract）
 pip install -r requirements.txt
 ```
 
@@ -112,21 +129,52 @@ export LLM_ENABLE_THINKING="false"
 
 ## 使用方法
 
+### 完整流程（推荐：PaddleOCR + LangExtract）
+
 ```bash
-# 默认：env（读取 LLM_MODEL）
+# 默认：PaddleOCR-VL 预处理 + LangExtract 抽取
+# 首次运行会自动下载 PaddleOCR-VL 模型
 python main.py
 
+# 限制篇数、分块大小
+python main.py --max 2 --chunk 12000
+```
+
+### 仅预处理（只跑 PaddleOCR，不跑 LangExtract）
+
+```bash
+# 批量将 AMpdf/ 下的 PDF 转为 .txt（适合先检查 OCR 质量）
+python main.py --preprocess-only
+
+# 强制重新 OCR（即使 .txt 已存在）
+python main.py --preprocess-only --force-ocr
+```
+
+### CPU 环境切换 PPStructureV3
+
+```bash
+# 无 GPU 时，设置 OCR_ENGINE 使用 PPStructureV3（CPU 可跑）
+export OCR_ENGINE="structurev3"
+python main.py --preprocess-only
+```
+
+### 跳过 PaddleOCR（旧模式，直接 PyMuPDF 提文本）
+
+```bash
+python main.py --no-ocr
+```
+
+### 其他示例
+
+```bash
 # 使用 Gemini
 python main.py --model gemini
 
-# 显式走 env（读取 .env 的 LLM_MODEL）
-python main.py --model env
-
-# 或直接传任意 OpenAI 兼容 model_id
+# 直接传 OpenAI 兼容 model_id
 python main.py --model ep_3nr55ube9_ernie
 
-# 限制篇数、分块大小、并发（workers>1 会并发调用）
-python main.py --model ep_3nr55ube9_ernie --max 2 --chunk 12000
+# 强制重新 OCR + LangExtract 全流程
+python main.py --force-ocr --max 2 --chunk 12000
 ```
 
 ### ERNIE 5.0 思考参数示例
@@ -150,6 +198,9 @@ export LLM_ENABLE_THINKING="false"
 | `--max` | 0 | 最多处理 PDF 数量，0 表示全部 |
 | `--chunk` | 6000 | 分块大小（字符），单块失败会切半重试 |
 | `--workers` | 1 | 分块并发数，1 为串行（便于排查卡住） |
+| `--no-ocr` | — | 跳过 PaddleOCR 预处理，直接用 PyMuPDF 提文本 |
+| `--force-ocr` | — | 强制重新运行 PaddleOCR（即使 .txt 已存在） |
+| `--preprocess-only` | — | 仅运行 PaddleOCR 预处理生成 .txt，不执行抽取 |
 
 ---
 
@@ -191,9 +242,11 @@ export LLM_ENABLE_THINKING="false"
 
 ## 依赖（见 requirements.txt）
 
+- `paddlepaddle` / `paddlepaddle-gpu`：PaddleOCR 底层框架（需单独安装）
+- `paddleocr[doc-parser]`：PaddleOCR-VL 1.5 文档解析
 - `langextract`：结构化抽取
 - `pydantic`：数据模型与校验
-- `pymupdf`：PDF 文本提取（首选）
+- `pymupdf`：PDF 文本提取（PyMuPDF，`--no-ocr` 时使用）
 - `pdfplumber`：PDF 提取备选
 - `python-dotenv`：加载 `.env`
 

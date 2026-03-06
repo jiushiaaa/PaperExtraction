@@ -1,8 +1,18 @@
 # 高熵合金论文抽取 Pipeline 依赖
 # Python >= 3.10
 
+# ---- LangExtract 结构化抽取 ----
 langextract>=1.0.0
 pydantic>=2.0
+python-dotenv>=1.0.0
+
+# ---- PDF 文本提取（PyMuPDF 为主，pdfplumber 备选） ----
 pymupdf>=1.23.0
 pdfplumber>=0.10.0
-python-dotenv>=1.0.0
+
+# ---- PaddleOCR-VL 1.5 文档解析（推荐，大幅减少幻觉） ----
+# 需要先安装 PaddlePaddle：
+#   GPU: pip install paddlepaddle-gpu   (需匹配 CUDA 版本)
+#   CPU: pip install paddlepaddle
+# 详见 https://www.paddlepaddle.org.cn/install/quick
+paddleocr[doc-parser]

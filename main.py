@@ -1,21 +1,19 @@
 # -*- coding: utf-8 -*-
 """
-高熵合金论文抽取 Pipeline（基于 LangExtract）。
+高熵合金论文抽取 Pipeline（PaddleOCR-VL 1.5 + LangExtract）。
 
 用法：
-  python main.py                          # 默认 env（读取 .env 的 LLM_MODEL）
-  python main.py --model gemini            # Gemini 2.0 Flash
-  python main.py --model env               # 使用 .env 的 LLM_MODEL
-  python main.py --model ep_xxx_custom     # 直接传 OpenAI 兼容 model_id
-  python main.py --max 2 --chunk 6000 --workers 5
+  python main.py                           # 默认: PaddleOCR 预处理 + LangExtract 抽取
+  python main.py --no-ocr                  # 跳过 PaddleOCR，直接 PyMuPDF 提文本（旧模式）
+  python main.py --force-ocr               # 强制重新 OCR（即使 .txt 已存在）
+  python main.py --preprocess-only         # 仅 PaddleOCR 预处理，不跑 LangExtract
+  python main.py --model env --chunk 6000  # 自定义模型 / 分块大小
 
-流程：
-  PDF → PyMuPDF 提文本 → 轻量清洗 → 手动分块 → 每块 lx.extract()（单块失败跳过/切半重试）
-  → 扁平 Extraction → 聚合
-  → group_extractions_to_entities()（按 material_id 聚合）
-  → MaterialEntity（Pydantic 验证）
-  → entity_to_target_json()（转目标模板）
-  → output/he_data_{model}.jsonl
+流程（默认）：
+  PDF → PaddleOCR-VL 1.5（本地）→ Markdown（含表格）
+      → 裁剪 Abstract/Introduction/References → .txt
+      → 轻量清洗 → 手动分块 → 每块 lx.extract()
+      → 扁平 Extraction → 聚合 MaterialEntity → 转目标 JSON → JSONL
 """
 
 from __future__ import annotations
@@ -369,16 +367,37 @@ def process_one_pdf(
     profile,
     chunk_size: int,
     chunk_workers: int = DEFAULT_CHUNK_WORKERS,
+    use_ocr: bool = True,
+    force_ocr: bool = False,
 ) -> list[dict]:
   """
-  对单篇 PDF：提文本 → 清洗并截断致谢/参考文献 → 手动分块 → 分块并发 lx.extract → 聚合 → 转 JSON。
+  对单篇 PDF 执行完整抽取流程。
+
+  use_ocr=True（默认）:
+    先检查同名 .txt 是否存在（PaddleOCR 预处理结果），
+    不存在则运行 PaddleOCR-VL 生成 .txt，读取后仅做轻量清洗。
+  use_ocr=False:
+    使用原来的 PyMuPDF 提取 + clean_and_truncate_text 路径。
   """
-  # ---- 1. 提取纯文本并清洗、截断 ----
-  log.info("[1/4] 提取正文: %s", pdf_path.name)
-  raw_text = extract_text_from_pdf(pdf_path)
-  text = clean_paper_text(raw_text)
-  text = clean_and_truncate_text(text)
-  log.info("        原始: %d 字符 → 清洗+截断后: %d 字符", len(raw_text), len(text))
+  txt_path = pdf_path.with_suffix(".txt")
+
+  if use_ocr:
+    if txt_path.is_file() and not force_ocr:
+      log.info("[1/4] 读取已有 OCR 文本: %s", txt_path.name)
+      text = txt_path.read_text(encoding="utf-8")
+    else:
+      log.info("[1/4] PaddleOCR-VL 预处理: %s", pdf_path.name)
+      from ocr_preprocess import preprocess_pdf
+      preprocess_pdf(pdf_path)
+      text = txt_path.read_text(encoding="utf-8")
+    text = clean_paper_text(text)
+    log.info("        OCR 文本: %d 字符", len(text))
+  else:
+    log.info("[1/4] 提取正文 (PyMuPDF): %s", pdf_path.name)
+    raw_text = extract_text_from_pdf(pdf_path)
+    text = clean_paper_text(raw_text)
+    text = clean_and_truncate_text(text)
+    log.info("        原始: %d 字符 → 清洗后: %d 字符", len(raw_text), len(text))
 
   prompt = build_prompt_description()
   chunks = chunk_text(text, chunk_size, overlap=500)
@@ -478,7 +497,7 @@ def process_one_pdf(
 def main():
   default_model = get_default_model_selector()
   parser = argparse.ArgumentParser(
-      description="高熵合金论文结构化抽取 Pipeline (LangExtract)",
+      description="高熵合金论文结构化抽取 Pipeline (PaddleOCR-VL + LangExtract)",
   )
   parser.add_argument(
       "--model", default=default_model,
@@ -499,13 +518,21 @@ def main():
       "--workers", type=int, default=DEFAULT_CHUNK_WORKERS,
       help="分块并发线程数 (default: %d)" % DEFAULT_CHUNK_WORKERS,
   )
+  parser.add_argument(
+      "--no-ocr", action="store_true",
+      help="跳过 PaddleOCR 预处理，直接用 PyMuPDF 提文本（旧模式）",
+  )
+  parser.add_argument(
+      "--force-ocr", action="store_true",
+      help="强制重新运行 PaddleOCR（即使 .txt 已存在）",
+  )
+  parser.add_argument(
+      "--preprocess-only", action="store_true",
+      help="仅运行 PaddleOCR 预处理生成 .txt，不执行 LangExtract 抽取",
+  )
   args = parser.parse_args()
 
-  # ---- 获取模型配置 ----
-  profile = get_model_config(args.model)
-  log.info("模型: %s (%s)", profile.config.model_id, profile.label)
-  log.info("schema_constraints: %s, chunk_size: %s, workers: %s",
-           profile.use_schema_constraints, args.chunk, args.workers)
+  use_ocr = not args.no_ocr
 
   # ---- 列出 PDF ----
   pdfs = list_pdfs(AMPDF_DIR)
@@ -516,6 +543,21 @@ def main():
   if args.max_pdfs > 0:
     pdfs = pdfs[: args.max_pdfs]
     log.info("仅处理前 %d 篇 PDF", len(pdfs))
+
+  # ---- 仅预处理模式 ----
+  if args.preprocess_only:
+    log.info("=== 仅预处理模式：PaddleOCR-VL → .txt ===")
+    from ocr_preprocess import preprocess_all
+    results = preprocess_all(AMPDF_DIR, force=args.force_ocr)
+    log.info("预处理完成：生成 %d 个 .txt 文件", len(results))
+    return 0
+
+  # ---- 获取模型配置 ----
+  profile = get_model_config(args.model)
+  log.info("模型: %s (%s)", profile.config.model_id, profile.label)
+  log.info("OCR预处理: %s, schema_constraints: %s, chunk: %s, workers: %s",
+           "ON" if use_ocr else "OFF",
+           profile.use_schema_constraints, args.chunk, args.workers)
 
   # ---- 输出路径（含模型名），本次运行先清空 ----
   OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -535,7 +577,10 @@ def main():
     log.info("[%d/%d] %s", i, len(pdfs), pdf_path.name)
     try:
       records = process_one_pdf(
-          pdf_path, profile, args.chunk, chunk_workers=args.workers
+          pdf_path, profile, args.chunk,
+          chunk_workers=args.workers,
+          use_ocr=use_ocr,
+          force_ocr=args.force_ocr,
       )
       save_results_to_jsonl(records, output_jsonl, _write_lock)
       total_records += len(records)

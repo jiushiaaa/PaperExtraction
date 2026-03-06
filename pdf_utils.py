@@ -7,14 +7,26 @@ from pathlib import Path
 
 logger = logging.getLogger(__name__)
 
-# 在正文末尾截断：在文本后 30% 区域内匹配以下独立行标题（不区分大小写），取最早位置截断
+# 前端裁剪：从 Experimental / Materials and Methods 等章节开始保留
+_FRONT_TRUNCATE = re.compile(
+    r"(?im)^\s*(?:#{1,4}\s*)?(?:"
+    r"2[\.\s]+(?:Experimental|Materials|Methods)"
+    r"|Experimental\s*(?:Procedure|Section|Details|Methods|Setup)?"
+    r"|Materials?\s*and\s*Methods?"
+    r"|Methodology"
+    r"|实验(?:部分|方法|过程)?"
+    r")\s*$"
+)
+
+# 后端裁剪：在文本后 30% 区域内匹配以下独立行标题，取最早位置截断
 _TRUNCATE_PATTERN = re.compile(
     r"(?im)^\s*("
     r"Acknowledgements|Acknowledgments|"
     r"Declaration of Competing Interest|"
     r"Conflict of interest|"
     r"CRediT authorship contribution statement|"
-    r"References|REFERENCES"
+    r"References|REFERENCES|"
+    r"致谢|参考文献"
     r")\s*$"
 )
 
@@ -53,31 +65,56 @@ def list_pdfs(dir_path: str | Path) -> list[Path]:
   return sorted(dir_path.glob("*.pdf"))
 
 
-def clean_and_truncate_text(text: str) -> str:
+def clean_and_truncate_text(text: str, trim_front: bool = True) -> str:
   """
-  在分块前截断：丢弃论文末尾的致谢、利益冲突、参考文献等非正文内容。
-  仅在文本**后 30%** 区域内查找独立行标题，取最早匹配位置截断，避免误删正文中的词汇。
+  在分块前裁剪论文无关内容。
+
+  裁剪策略：
+    1. 前端裁剪（trim_front=True 时）：
+       找 Experimental / Materials and Methods 等标题，从此处开始保留，
+       丢弃 Abstract、Introduction 等。
+    2. 后端裁剪：
+       在文本后 30% 区域找 References / Acknowledgements 等标题，截断。
 
   Returns:
-    截断后的文本（可能为原文本若未匹配到任何标题）。
+    裁剪后的文本（若匹配不到任何标题则保留原文）。
   """
   if not text or len(text) < 100:
     return text
+
+  start = 0
+  end = len(text)
+
   try:
-    search_start = max(0, int(len(text) * 0.7))
+    # 前端裁剪
+    if trim_front:
+      m_front = _FRONT_TRUNCATE.search(text)
+      if m_front:
+        start = m_front.start()
+        logger.info(
+            "clean_and_truncate: 前端裁剪到 '%s' (pos %d)",
+            m_front.group().strip()[:60], start,
+        )
+
+    # 后端裁剪
+    search_start = max(start, int(len(text) * 0.7))
     search_zone = text[search_start:]
     m = _TRUNCATE_PATTERN.search(search_zone)
     if m:
-      truncate_pos = search_start + m.start()
-      out = text[:truncate_pos].rstrip()
+      end = search_start + m.start()
       logger.info(
-          "clean_and_truncate: 在位置 %d 截断 (匹配: %r), 长度 %d -> %d",
-          truncate_pos, m.group(1).strip(), len(text), len(out),
+          "clean_and_truncate: 后端截断于 '%s' (pos %d), 长度 %d -> %d",
+          m.group(1).strip(), end, len(text), end - start,
       )
-      return out
   except Exception as e:
     logger.warning("clean_and_truncate 异常，保留原文: %s", e)
-  return text
+    return text
+
+  result = text[start:end].rstrip()
+  if len(result) < 100 and len(text) > 100:
+    logger.warning("裁剪后过短 (%d), 回退原文", len(result))
+    return text
+  return result
 
 
 def chunk_text(
