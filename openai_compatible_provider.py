@@ -7,6 +7,7 @@ import concurrent.futures
 import json
 import logging
 import os
+import time
 import re
 from collections.abc import Iterator, Sequence
 from typing import Any
@@ -42,6 +43,27 @@ class OpenAICompatibleLanguageModel(OpenAILanguageModel):
   _DISABLE_RESPONSE_FORMAT = os.environ.get(
       "LLM_DISABLE_RESPONSE_FORMAT", ""
   ).lower() in {"1", "true", "yes"}
+  _MAX_RETRIES = max(0, int(os.environ.get("LLM_MAX_RETRIES", "2")))
+  _RETRY_BACKOFF_SECONDS = float(
+      os.environ.get("LLM_RETRY_BACKOFF_SECONDS", "1.5")
+  )
+
+  @staticmethod
+  def _is_retryable_error(exc: Exception) -> bool:
+    msg = str(exc).lower()
+    retry_markers = (
+        "timed out",
+        "timeout",
+        "rate limit",
+        "too many requests",
+        "connection error",
+        "temporarily unavailable",
+        "service unavailable",
+        "502",
+        "503",
+        "504",
+    )
+    return any(marker in msg for marker in retry_markers)
 
   @staticmethod
   def _extract_first_balanced_json(text: str) -> str | None:
@@ -186,7 +208,31 @@ class OpenAICompatibleLanguageModel(OpenAILanguageModel):
         if (v := normalized_config.get(key)) is not None:
           api_params[key] = v
 
-      response = self._client.chat.completions.create(**api_params)
+      response = None
+      last_error: Exception | None = None
+      for attempt in range(self._MAX_RETRIES + 1):
+        try:
+          response = self._client.chat.completions.create(**api_params)
+          last_error = None
+          break
+        except Exception as e:
+          last_error = e
+          if attempt >= self._MAX_RETRIES or not self._is_retryable_error(e):
+            raise
+          sleep_s = self._RETRY_BACKOFF_SECONDS * (2 ** attempt)
+          log.warning(
+              "LLM 请求失败（可重试）: %s；%.1fs 后第 %d 次重试",
+              str(e)[:120],
+              sleep_s,
+              attempt + 1,
+          )
+          time.sleep(sleep_s)
+
+      if response is None:
+        # 理论上不会走到这里，兜底保护。
+        raise exceptions.InferenceRuntimeError(
+            f"OpenAI API error: {str(last_error) if last_error else 'unknown'}"
+        )
       message = response.choices[0].message if response.choices else None
       output_text = self._coerce_message_content(message)
 

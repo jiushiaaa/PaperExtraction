@@ -91,6 +91,13 @@ export LLM_ENABLE_THINKING="false"
 # 单块超时秒数（可选，默认 240）
 # export CHUNK_TIMEOUT_SECONDS="300"
 
+# 请求重试（可选，默认重试 2 次，指数退避）
+# export LLM_MAX_RETRIES="2"
+# export LLM_RETRY_BACKOFF_SECONDS="1.5"
+
+# 实体落地校验（默认 true：实体名/化学式需能在原文命中，减少幻觉）
+# export STRICT_ENTITY_GROUNDING="true"
+
 # Gemini（仅在 --model gemini 时）
 # export GOOGLE_API_KEY="你的Gemini密钥"
 ```
@@ -118,7 +125,7 @@ python main.py --model env
 # 或直接传任意 OpenAI 兼容 model_id
 python main.py --model ep_3nr55ube9_ernie
 
-# 限制篇数、分块大小、并发（当前默认串行，--workers 主要影响后续可扩展）
+# 限制篇数、分块大小、并发（workers>1 会并发调用）
 python main.py --model ep_3nr55ube9_ernie --max 2 --chunk 12000
 ```
 
