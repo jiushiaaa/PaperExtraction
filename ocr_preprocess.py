@@ -155,12 +155,15 @@ def _ocr_pdf_via_images(pdf_path: Path, pipeline) -> str:
     return "\n\n".join(all_parts)
 
 
-def _ocr_progress_logger(stop_event: threading.Event) -> None:
-    """后台线程：每 60 秒打印一次，避免用户误以为程序卡死。用 print+flush 确保在 Paddle 大量 stderr 下仍可见。"""
+def _ocr_progress_logger(stop_event: threading.Event, pdf_name: str = "") -> None:
+    """后台线程：每 60 秒打印一次，避免用户误以为程序卡死。pdf_name 用于提示当前正在处理哪一篇。"""
     count = 0
     while not stop_event.wait(timeout=60):
         count += 1
-        msg = "  … OCR 仍在处理中（已等待约 %d 分钟，大 PDF 首次可能较久）" % count
+        if pdf_name:
+            msg = "  … OCR 仍在处理中（当前: %s，已等待约 %d 分钟）" % (pdf_name, count)
+        else:
+            msg = "  … OCR 仍在处理中（已等待约 %d 分钟，大 PDF 首次可能较久）" % count
         print(msg, flush=True)
         log.info(msg)
 
@@ -176,18 +179,19 @@ def ocr_pdf_to_text(pdf_path: Path) -> str:
       - 布局分析（PPStructureV3）
     """
     # 先打提示再加载管线，否则会被 Paddle 大量加载日志淹没
+    pdf_name = pdf_path.name
     msg_start = "  [OCR] 正在加载 PaddleOCR 管线并准备解析 PDF（首次会加载模型，请勿中断）…"
     print(msg_start, flush=True)
     log.info(msg_start)
     pipeline = _get_pipeline()
 
     try:
-        msg_parse = "  [OCR] 开始解析 PDF（大文件可能需要数分钟），请勿中断…"
+        msg_parse = "  [OCR] 开始解析: %s（大文件可能需要数分钟），请勿中断…" % pdf_name
         print(msg_parse, flush=True)
         log.info(msg_parse)
         stop_event = threading.Event()
         progress_thread = threading.Thread(
-            target=_ocr_progress_logger, args=(stop_event,), daemon=True
+            target=_ocr_progress_logger, args=(stop_event, pdf_name), daemon=True
         )
         progress_thread.start()
         try:
@@ -195,7 +199,7 @@ def ocr_pdf_to_text(pdf_path: Path) -> str:
             pages_res = list(output)
         finally:
             stop_event.set()
-        msg_done = "  [OCR] PaddleOCR 解析完成，共 %d 页" % len(pages_res)
+        msg_done = "  [OCR] 完成: %s，共 %d 页" % (pdf_name, len(pages_res))
         print(msg_done, flush=True)
         log.info(msg_done)
 
@@ -327,10 +331,14 @@ def preprocess_all(
     for i, pdf in enumerate(pdfs, 1):
         txt_path = output_dir / (pdf.stem + ".txt")
         if txt_path.is_file() and not force:
+            msg_skip = "  [%d/%d] 跳过（已有）: %s" % (i, len(pdfs), txt_path.name)
+            print(msg_skip, flush=True)
             log.info("[%d/%d] 跳过（已有）: %s", i, len(pdfs), txt_path.name)
             results.append(txt_path)
             continue
 
+        msg_doing = "  [%d/%d] 正在处理: %s" % (i, len(pdfs), pdf.name)
+        print(msg_doing, flush=True)
         log.info("[%d/%d] 处理: %s", i, len(pdfs), pdf.name)
         try:
             path = preprocess_pdf(pdf, output_dir=output_dir)

@@ -31,6 +31,10 @@ AMpdf/*.txt
 # 安装流程记录
 paddlepaddle安装流程.txt
 
+# 本地参考/标注数据（勿提交）
+KnowMat2-master/
+手工标注结果/
+
 # 其他
 *.log
 .DS_Store
