@@ -1,7 +1,5 @@
 # 将本项目推送到 PaperExtraction knowmat 分支
 
-因公司环境只能通过 git 传递，需将 **data/raw** 与 **data/processed** 一并提交。
-
 ## 一、已做修改
 
 - 已删除 `data/processed/.gitignore`，使 `data/processed` 下所有抽取结果可被 git 跟踪并提交。
