@@ -5,6 +5,9 @@
 ## 一、已做修改
 
 - 已删除 `data/processed/.gitignore`，使 `data/processed` 下所有抽取结果可被 git 跟踪并提交。
+- 已更新 `data/.gitignore`，增加 `!raw/*` 与 `!processed/*`，便于后续正常添加 data 下文件。
+- 根目录 `.gitignore` 已加入 `.cursor/`，避免提交 Cursor IDE 配置与 skills。
+- 本地已执行：`git init`、`git remote add origin`、`git add .`、`git add -f data/raw/* data/processed`、`git commit`。若推送因认证未完成，请在本机执行下面「强制推送」。
 
 ## 二、在项目根目录执行（PowerShell 或 CMD）
 
@@ -43,14 +46,15 @@ git commit -m "knowmat: include data/raw and data/processed for transfer"
 git push origin knowmat
 ```
 
-### 若远程已有 knowmat 分支且要覆盖
+### 若远程已有 knowmat 分支且要用本地覆盖（当前推荐）
 
 ```powershell
-git checkout knowmat
-git add .
-git commit -m "knowmat: sync with data/raw and data/processed"
-git push origin knowmat --force
+cd D:\knowmat2
+
+git push -u origin HEAD:knowmat --force
 ```
+
+首次推送可能提示输入 GitHub 用户名/密码或 Personal Access Token，按提示完成认证即可。
 
 ## 三、注意
 
