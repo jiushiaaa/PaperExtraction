@@ -1,0 +1,441 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "schema_version": "2.1",
+  "pipeline_version": "knowmat-2.0.1",
+  "Materials": [
+    {
+      "description": "--- Material 1: FeCoCrNi ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "FeCoCrNiMo0",
+      "Formula_Normalized": "FeCoCrNi",
+      "Composition_JSON": {},
+      "Source_DOI": "",
+      "Source_File": "5-2024-IJP-在 FeCoCrNiMox.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_01_Default",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "L-PBF additive manufacturing; laser power: 200 W; scanning speed: 750 mm/s; hatch spacing: 80 μm; layer thickness: 40 μm; rotation between layers: 67°; preheating temperature: 120 °C",
+          "Key_Params_JSON": {},
+          "Main_Phase": "FCC",
+          "Microstructure_Text_For_AI": "technique_1: SEM; ZEISS-EVO 18 in backscattered electron mode; technique_2: EBSD; FEI-Tecnai G2 F30 TEM and energy-dispersive X-ray spectroscopy (EDS)",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": 35.1,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 566.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 719.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Uniform_Elongation",
+              "Property_Value": 18.15,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Total_Elongation",
+              "Property_Value": 19.82,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 398.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 420.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Uniform_Elongation",
+              "Property_Value": 1.2,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Total_Elongation",
+              "Property_Value": 1.25,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": null,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 35.1,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": null,
+              "Property_Type": "geometrically_necessary_dislocation_density",
+              "Property_Value": 8.45,
+              "Property_Unit": "10^14 /m^2"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": null,
+              "Property_Type": "recrystallized_fraction",
+              "Property_Value": 2.9,
+              "Property_Unit": "%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "--- Material 2: FeCoCrNiMo0.1 ---",
+      "Mat_ID": "M002",
+      "Alloy_Name_Raw": "FeCoCrNiMo0.1",
+      "Formula_Normalized": "FeCoCrNiMo0.1",
+      "Composition_JSON": {
+        "Mo": 0.1
+      },
+      "Source_DOI": "",
+      "Source_File": "5-2024-IJP-在 FeCoCrNiMox.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S002_01_Default",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "L-PBF additive manufacturing; laser power: 200 W; scanning speed: 750 mm/s; hatch spacing: 80 μm; layer thickness: 40 μm; rotation between layers: 67°; preheating temperature: 120 °C",
+          "Key_Params_JSON": {},
+          "Main_Phase": "FCC",
+          "Microstructure_Text_For_AI": "technique_1: SEM; ZEISS-EVO 18 in backscattered electron mode; technique_2: EBSD; FEI-Tecnai G2 F30 TEM and energy-dispersive X-ray spectroscopy (EDS)",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": 47.4,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 609.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 776.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Uniform_Elongation",
+              "Property_Value": 27.46,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Total_Elongation",
+              "Property_Value": 36.51,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 407.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 473.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Uniform_Elongation",
+              "Property_Value": 6.71,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Total_Elongation",
+              "Property_Value": 8.23,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": null,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 47.4,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": null,
+              "Property_Type": "geometrically_necessary_dislocation_density",
+              "Property_Value": 9.84,
+              "Property_Unit": "10^14 /m^2"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": null,
+              "Property_Type": "recrystallized_fraction",
+              "Property_Value": 13.3,
+              "Property_Unit": "%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "--- Material 3: FeCoCrNiMo0.3 ---",
+      "Mat_ID": "M003",
+      "Alloy_Name_Raw": "FeCoCrNiMo0.3",
+      "Formula_Normalized": "FeCoCrNiMo0.3",
+      "Composition_JSON": {
+        "Mo": 0.3
+      },
+      "Source_DOI": "",
+      "Source_File": "5-2024-IJP-在 FeCoCrNiMox.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S003_01_Default",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "L-PBF additive manufacturing; laser power: 200 W; scanning speed: 750 mm/s; hatch spacing: 80 μm; layer thickness: 40 μm; rotation between layers: 67°; preheating temperature: 120 °C",
+          "Key_Params_JSON": {},
+          "Main_Phase": "FCC",
+          "Microstructure_Text_For_AI": "technique_1: SEM; ZEISS-EVO 18 in backscattered electron mode; technique_2: EBSD; FEI-Tecnai G2 F30 TEM and energy-dispersive X-ray spectroscopy (EDS)",
+          "Has_Precipitates": true,
+          "Grain_Size_avg_um": 57.5,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 698.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 953.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Uniform_Elongation",
+              "Property_Value": 25.02,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Total_Elongation",
+              "Property_Value": 27.78,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 477.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 661.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Uniform_Elongation",
+              "Property_Value": 19.35,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Total_Elongation",
+              "Property_Value": 22.98,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": null,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 57.5,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": null,
+              "Property_Type": "geometrically_necessary_dislocation_density",
+              "Property_Value": 8.25,
+              "Property_Unit": "10^14 /m^2"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": null,
+              "Property_Type": "recrystallized_fraction",
+              "Property_Value": 10.7,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T012",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Stacking_Fault_Energy",
+              "Property_Value": -33.0,
+              "Property_Unit": "mJ/m^2"
+            },
+            {
+              "Test_ID": "T013",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Stacking_Fault_Energy",
+              "Property_Value": -15.0,
+              "Property_Unit": "mJ/m^2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "--- Material 4: FeCoCrNiMo0.5 ---",
+      "Mat_ID": "M004",
+      "Alloy_Name_Raw": "FeCoCrNiMo0.5",
+      "Formula_Normalized": "FeCoCrNiMo0.5",
+      "Composition_JSON": {
+        "Mo": 0.5
+      },
+      "Source_DOI": "",
+      "Source_File": "5-2024-IJP-在 FeCoCrNiMox.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S004_01_Default",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "L-PBF additive manufacturing; laser power: 200 W; scanning speed: 750 mm/s; hatch spacing: 70 μm; layer thickness: 40 μm; rotation between layers: 67°; preheating temperature: 120 °C",
+          "Key_Params_JSON": {},
+          "Main_Phase": "FCC",
+          "Microstructure_Text_For_AI": "technique_1: SEM; ZEISS-EVO 18 in backscattered electron mode; technique_2: EBSD; FEI-Tecnai G2 F30 TEM and energy-dispersive X-ray spectroscopy (EDS)",
+          "Has_Precipitates": true,
+          "Grain_Size_avg_um": 51.9,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 830.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 1091.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Uniform_Elongation",
+              "Property_Value": 19.38,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Total_Elongation",
+              "Property_Value": 19.93,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 578.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 799.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Uniform_Elongation",
+              "Property_Value": 11.16,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Total_Elongation",
+              "Property_Value": 11.33,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": null,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 51.9,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": null,
+              "Property_Type": "geometrically_necessary_dislocation_density",
+              "Property_Value": 8.99,
+              "Property_Unit": "10^14 /m^2"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": null,
+              "Property_Type": "recrystallized_fraction",
+              "Property_Value": 6.4,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T012",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Stacking_Fault_Energy",
+              "Property_Value": -48.0,
+              "Property_Unit": "mJ/m^2"
+            },
+            {
+              "Test_ID": "T013",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Stacking_Fault_Energy",
+              "Property_Value": -26.0,
+              "Property_Unit": "mJ/m^2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+    "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+    "Materials": [
+      {
+        "description": "--- 第1种合金 (Material 1) ---",
+        "Mat_ID": "M001",
+        "Alloy_Name_Raw": "Co42Cr20Ni30Ti4Al4",
+        "Formula_Normalized": "Co42Cr20Ni30Ti4Al4",
+        "Composition_JSON": {
+          "Co": 42.0,
+          "Cr": 20.0,
+          "Ni": 30.0,
+          "Ti": 4.0,
+          "Al": 4.0
+        },
+        "Source_DOI": "10.1016/j.jmst.2024.02.077",
+        "Processed_Samples": [
+          {
+            "Sample_ID": "S001_AsBuilt",
+            "Process_Category": "AM_SLM_StressRelief",
+            "Process_Text_For_AI": "Selective Laser Melting (SLM) under Argon atmosphere followed by stress relief annealing. SLM parameters: Laser power 200 W, scanning speed 1000 mm/s, hatching space 90 um, layer thickness 40 um, rotation 67 deg. Stress relief: 723 K for 3 h followed by water quenching.",
+            "Key_Params_JSON": {
+              "Laser_Power_W": 200,
+              "Scanning_Speed_mm_s": 1000,
+              "Hatching_Space_um": 90,
+              "Layer_Thickness_um": 40,
+              "Stress_Relief_Temp_K": 723,
+              "Stress_Relief_Time_h": 3
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Columnar grains composed of uniform sub-grain cellular structures with sizes around 0.5-1 um. Cellular boundaries composed of dislocation walls with Ti segregation. No precipitates observed.",
+            "Has_Precipitates": false,
+            "Grain_Size_avg_um": 11.9,
+            "Performance_Tests": [
+              {
+                "Test_ID": "T001_298K",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 734.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T001_298K_UTS",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 995.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T001_298K_TE",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Elongation",
+                "Property_Value": 37.7,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T002_77K",
+                "Test_Temperature_K": 77,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 953.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T002_77K_UTS",
+                "Test_Temperature_K": 77,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 1370.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T002_77K_TE",
+                "Test_Temperature_K": 77,
+                "Property_Type": "Elongation",
+                "Property_Value": 49.9,
+                "Property_Unit": "%"
+              }
+            ]
+          },
+          {
+            "Sample_ID": "S002_AsAnnealed",
+            "Process_Category": "HeatTreat_Aging",
+            "Process_Text_For_AI": "SLM fabricated, stress relieved (723 K/3 h), then annealed at 973 K for 64 h followed by water quenching.",
+            "Key_Params_JSON": {
+              "Aging_Temp_K": 973,
+              "Aging_Time_h": 64,
+              "Cooling": "Water Quenching"
+            },
+            "Main_Phase": "FCC + L12",
+            "Microstructure_Text_For_AI": "Heterogeneous microstructure composed of partially recrystallized matrix and heterogeneously precipitated L12 phase. Contains discontinuous precipitation (DP) regions and continuous precipitation (CP) regions.",
+            "Has_Precipitates": true,
+            "Grain_Size_avg_um": 3.5,
+            "Performance_Tests": [
+              {
+                "Test_ID": "T003_298K",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 1180.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T003_298K_UTS",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 1586.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T003_298K_TE",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Elongation",
+                "Property_Value": 22.7,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T004_77K",
+                "Test_Temperature_K": 77,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 1341.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T004_77K_UTS",
+                "Test_Temperature_K": 77,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 1944.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T004_77K_TE",
+                "Test_Temperature_K": 77,
+                "Property_Type": "Elongation",
+                "Property_Value": 22.6,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T005_773K",
+                "Test_Temperature_K": 773,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 977.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T005_773K_UTS",
+                "Test_Temperature_K": 773,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 1263.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T005_773K_TE",
+                "Test_Temperature_K": 773,
+                "Property_Type": "Elongation",
+                "Property_Value": 13.8,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T006_873K",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 926.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T006_873K_UTS",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 1147.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T006_873K_TE",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Elongation",
+                "Property_Value": 9.1,
+                "Property_Unit": "%"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

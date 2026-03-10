@@ -1,0 +1,115 @@
+{
+  "timestamp": "2026-03-09T17:59:08.979292",
+  "papers_scanned": 6,
+  "summary": {
+    "papers_passed": 1,
+    "papers_warning": 4,
+    "papers_failed": 1,
+    "avg_quality_score": 40.833333333333336,
+    "avg_materials_count": 1.5,
+    "avg_properties_count": 24.0,
+    "doi_present_rate": 0.0,
+    "avg_phase_filled_rate": 0.16666666666666666,
+    "avg_process_unknown_rate": 0.5833333333333334,
+    "avg_composition_valid_rate": 0.3333333333333333
+  },
+  "details": [
+    {
+      "paper_name": "4-2025-IJP-Ni₆₁.₃Cr₂₅.₃W₄.₄Mo₁.₄Fe₁.₇Co₁.₄Al₁.₁Mn₀.₄Si₀.₇C₂.₅La₀.₀₁₃",
+      "materials_count": 0,
+      "samples_count": 0,
+      "properties_count": 0,
+      "doi_present": false,
+      "phase_filled_rate": 0,
+      "process_unknown_rate": 0,
+      "grain_filled_rate": 0,
+      "composition_valid_rate": 0,
+      "red_lines": [
+        "NO_MATERIALS",
+        "NO_PROPERTIES"
+      ],
+      "needs_review": true,
+      "quality_score": 20
+    },
+    {
+      "paper_name": "5-2024-IJP-在 FeCoCrNiMox",
+      "materials_count": 4,
+      "samples_count": 4,
+      "properties_count": 46,
+      "doi_present": false,
+      "phase_filled_rate": 0.0,
+      "process_unknown_rate": 1.0,
+      "grain_filled_rate": 0.0,
+      "composition_valid_rate": 0.0,
+      "red_lines": [
+        "HIGH_UNKNOWN_PROCESS",
+        "LOW_COMPOSITION_QUALITY"
+      ],
+      "needs_review": true,
+      "quality_score": 30
+    },
+    {
+      "paper_name": "1-2024-MSEA-Ti₄₂Hf₂₁Nb₂₁V₁₆-DED",
+      "materials_count": 1,
+      "samples_count": 1,
+      "properties_count": 17,
+      "doi_present": false,
+      "phase_filled_rate": 0.0,
+      "process_unknown_rate": 0.0,
+      "grain_filled_rate": 0.0,
+      "composition_valid_rate": 0.0,
+      "red_lines": [
+        "LOW_COMPOSITION_QUALITY"
+      ],
+      "needs_review": true,
+      "quality_score": 45
+    },
+    {
+      "paper_name": "3-2024-JMST- Co42Cr20Ni30Ti4Al4",
+      "materials_count": 1,
+      "samples_count": 1,
+      "properties_count": 22,
+      "doi_present": false,
+      "phase_filled_rate": 0.0,
+      "process_unknown_rate": 1.0,
+      "grain_filled_rate": 0.0,
+      "composition_valid_rate": 1.0,
+      "red_lines": [
+        "HIGH_UNKNOWN_PROCESS"
+      ],
+      "needs_review": true,
+      "quality_score": 45
+    },
+    {
+      "paper_name": "6-2024-MSEA- FeCoCrNiMo0.5",
+      "materials_count": 1,
+      "samples_count": 1,
+      "properties_count": 13,
+      "doi_present": false,
+      "phase_filled_rate": 1.0,
+      "process_unknown_rate": 1.0,
+      "grain_filled_rate": 0.0,
+      "composition_valid_rate": 0.0,
+      "red_lines": [
+        "HIGH_UNKNOWN_PROCESS",
+        "LOW_COMPOSITION_QUALITY"
+      ],
+      "needs_review": true,
+      "quality_score": 45
+    },
+    {
+      "paper_name": "2-2025-Acta-Nb₁₅Ta₁₀W₇₅---添加NbC 纳米沉淀",
+      "materials_count": 2,
+      "samples_count": 2,
+      "properties_count": 46,
+      "doi_present": false,
+      "phase_filled_rate": 0.0,
+      "process_unknown_rate": 0.5,
+      "grain_filled_rate": 0.0,
+      "composition_valid_rate": 1.0,
+      "red_lines": [],
+      "needs_review": false,
+      "quality_score": 60
+    }
+  ]
+}

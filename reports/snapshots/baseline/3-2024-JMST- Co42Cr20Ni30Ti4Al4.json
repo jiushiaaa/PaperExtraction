@@ -1,0 +1,188 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "Materials": [
+    {
+      "description": "--- Material 1: Co42Cr20Ni30Ti4Al4 (at.%) ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "Co42Cr20Ni30Ti4Al4 (at.%)",
+      "Formula_Normalized": "Co42Cr20Ni30Ti4Al4(at.%)",
+      "Composition_JSON": {
+        "Co": 42.0,
+        "Cr": 20.0,
+        "Ni": 30.0,
+        "Ti": 4.0,
+        "Al": 4.0
+      },
+      "Source_DOI": "",
+      "Source_File": "3-2024-JMST- Co42Cr20Ni30Ti4Al4.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_AutoExtracted",
+          "Process_Category": "Unknown",
+          "Process_Text_For_AI": "Selective laser melting (SLM) with laser power of 200 W, scanning speed of 1000 mm s⁻¹, hatching space of 90 μm, beam size of 40 μm, layer thickness of 40 μm, argon atmosphere; followed by stress relief annealing at 723 K for 3 h with water quenching; then annealing at 973 K for 64 h followed by water quenching",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: XRD (Rigaku D/MAX-2250, Japan) with Cu Kα radiation; technique_2: SEM (TESCAN MIRA4 LMH) equipped with EDS and EBSD detector; technique_3: TEM (JEOL JEM-2100F, and JEM-ARM300F2, Japan) equipped with EDS; technique_4: EBSD (Aztec Crystal software); technique_5: Tensile testing at different temperatures (77 K, 298 K, 773 K, 873 K); technique_6: Metallographic methods for porosity measurement; technique_7: Archimedes method for density measurement; technique_8: Laser diffraction particle size analyzer (Malvern, Micro-plus)",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298.0,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 734.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298.0,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1180.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 77.0,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 953.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 77.0,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1341.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 773.0,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 977.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 873.0,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 926.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 298.0,
+              "Property_Type": "ultimate_tensile_strength",
+              "Property_Value": 995.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 298.0,
+              "Property_Type": "ultimate_tensile_strength",
+              "Property_Value": 1586.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": 77.0,
+              "Property_Type": "ultimate_tensile_strength",
+              "Property_Value": 1370.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": 77.0,
+              "Property_Type": "ultimate_tensile_strength",
+              "Property_Value": 1944.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": 773.0,
+              "Property_Type": "ultimate_tensile_strength",
+              "Property_Value": 1263.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T012",
+              "Test_Temperature_K": 873.0,
+              "Property_Type": "ultimate_tensile_strength",
+              "Property_Value": 1147.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T013",
+              "Test_Temperature_K": 298.0,
+              "Property_Type": "total_elongation",
+              "Property_Value": 37.7,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T014",
+              "Test_Temperature_K": 298.0,
+              "Property_Type": "total_elongation",
+              "Property_Value": 22.7,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T015",
+              "Test_Temperature_K": 77.0,
+              "Property_Type": "total_elongation",
+              "Property_Value": 49.9,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T016",
+              "Test_Temperature_K": 77.0,
+              "Property_Type": "total_elongation",
+              "Property_Value": 22.6,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T017",
+              "Test_Temperature_K": 773.0,
+              "Property_Type": "total_elongation",
+              "Property_Value": 13.8,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T018",
+              "Test_Temperature_K": 873.0,
+              "Property_Type": "total_elongation",
+              "Property_Value": 9.1,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T019",
+              "Test_Temperature_K": null,
+              "Property_Type": "density",
+              "Property_Value": 8.07,
+              "Property_Unit": "g/mm³"
+            },
+            {
+              "Test_ID": "T020",
+              "Test_Temperature_K": null,
+              "Property_Type": "density",
+              "Property_Value": 8.13,
+              "Property_Unit": "g/mm³"
+            },
+            {
+              "Test_ID": "T021",
+              "Test_Temperature_K": null,
+              "Property_Type": "Relative_Density",
+              "Property_Value": 99.26,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T022",
+              "Test_Temperature_K": null,
+              "Property_Type": "porosity",
+              "Property_Value": 0.048,
+              "Property_Unit": "%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

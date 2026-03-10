@@ -1,0 +1,29 @@
+numpy==2.2.6
+scipy==1.16.0
+pandas==2.3.2
+tqdm==4.67.1
+click
+
+matplotlib
+seaborn
+
+langchain==0.3.26
+langchain-community==0.3.27
+langchain-openai==0.3.27
+langgraph==0.6.10
+trustcall==0.0.39
+openai==1.93.2
+
+# paddlepaddle>=3.0.0
+# paddleocr>=3.0.0
+pymupdf==1.24.13
+
+pydantic==2.11.7
+python-dotenv==1.1.1
+colorlog==6.9.0
+
+sentence-transformers==5.0.0
+torch==2.8.0
+torchvision==0.23.0
+
+-e .

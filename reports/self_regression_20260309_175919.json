@@ -1,0 +1,216 @@
+{
+  "timestamp": "2026-03-09T17:59:19.873542",
+  "snapshot_name": "baseline",
+  "snapshot_time": "2026-03-09T17:59:14.133361",
+  "papers_compared": 6,
+  "summary": {
+    "papers_improved": 0,
+    "papers_degraded": 0,
+    "papers_unchanged": 6,
+    "avg_materials_delta": 0.0,
+    "avg_samples_delta": 0.0,
+    "avg_properties_delta": 0.0,
+    "avg_phase_filled_delta": 0.0,
+    "avg_process_unknown_delta": 0.0
+  },
+  "details": [
+    {
+      "paper_name": "1-2024-MSEA-Ti₄₂Hf₂₁Nb₂₁V₁₆-DED",
+      "materials": {
+        "snapshot": 1,
+        "current": 1,
+        "delta": 0
+      },
+      "samples": {
+        "snapshot": 1,
+        "current": 1,
+        "delta": 0
+      },
+      "properties": {
+        "snapshot": 17,
+        "current": 17,
+        "delta": 0
+      },
+      "doi": {
+        "snapshot": "",
+        "current": "",
+        "status": "不变"
+      },
+      "phase_filled": {
+        "snapshot_rate": 0.0,
+        "current_rate": 0.0,
+        "delta": 0.0
+      },
+      "process_unknown": {
+        "snapshot_rate": 0.0,
+        "current_rate": 0.0,
+        "delta": 0.0
+      }
+    },
+    {
+      "paper_name": "2-2025-Acta-Nb₁₅Ta₁₀W₇₅---添加NbC 纳米沉淀",
+      "materials": {
+        "snapshot": 2,
+        "current": 2,
+        "delta": 0
+      },
+      "samples": {
+        "snapshot": 2,
+        "current": 2,
+        "delta": 0
+      },
+      "properties": {
+        "snapshot": 46,
+        "current": 46,
+        "delta": 0
+      },
+      "doi": {
+        "snapshot": "",
+        "current": "",
+        "status": "不变"
+      },
+      "phase_filled": {
+        "snapshot_rate": 0.0,
+        "current_rate": 0.0,
+        "delta": 0.0
+      },
+      "process_unknown": {
+        "snapshot_rate": 0.5,
+        "current_rate": 0.5,
+        "delta": 0.0
+      }
+    },
+    {
+      "paper_name": "3-2024-JMST- Co42Cr20Ni30Ti4Al4",
+      "materials": {
+        "snapshot": 1,
+        "current": 1,
+        "delta": 0
+      },
+      "samples": {
+        "snapshot": 1,
+        "current": 1,
+        "delta": 0
+      },
+      "properties": {
+        "snapshot": 22,
+        "current": 22,
+        "delta": 0
+      },
+      "doi": {
+        "snapshot": "",
+        "current": "",
+        "status": "不变"
+      },
+      "phase_filled": {
+        "snapshot_rate": 0.0,
+        "current_rate": 0.0,
+        "delta": 0.0
+      },
+      "process_unknown": {
+        "snapshot_rate": 1.0,
+        "current_rate": 1.0,
+        "delta": 0.0
+      }
+    },
+    {
+      "paper_name": "4-2025-IJP-Ni₆₁.₃Cr₂₅.₃W₄.₄Mo₁.₄Fe₁.₇Co₁.₄Al₁.₁Mn₀.₄Si₀.₇C₂.₅La₀.₀₁₃",
+      "materials": {
+        "snapshot": 0,
+        "current": 0,
+        "delta": 0
+      },
+      "samples": {
+        "snapshot": 0,
+        "current": 0,
+        "delta": 0
+      },
+      "properties": {
+        "snapshot": 0,
+        "current": 0,
+        "delta": 0
+      },
+      "doi": {
+        "snapshot": "",
+        "current": "",
+        "status": "不变"
+      },
+      "phase_filled": {
+        "snapshot_rate": 0,
+        "current_rate": 0,
+        "delta": 0
+      },
+      "process_unknown": {
+        "snapshot_rate": 0,
+        "current_rate": 0,
+        "delta": 0
+      }
+    },
+    {
+      "paper_name": "5-2024-IJP-在 FeCoCrNiMox",
+      "materials": {
+        "snapshot": 4,
+        "current": 4,
+        "delta": 0
+      },
+      "samples": {
+        "snapshot": 4,
+        "current": 4,
+        "delta": 0
+      },
+      "properties": {
+        "snapshot": 46,
+        "current": 46,
+        "delta": 0
+      },
+      "doi": {
+        "snapshot": "",
+        "current": "",
+        "status": "不变"
+      },
+      "phase_filled": {
+        "snapshot_rate": 0.0,
+        "current_rate": 0.0,
+        "delta": 0.0
+      },
+      "process_unknown": {
+        "snapshot_rate": 1.0,
+        "current_rate": 1.0,
+        "delta": 0.0
+      }
+    },
+    {
+      "paper_name": "6-2024-MSEA- FeCoCrNiMo0.5",
+      "materials": {
+        "snapshot": 1,
+        "current": 1,
+        "delta": 0
+      },
+      "samples": {
+        "snapshot": 1,
+        "current": 1,
+        "delta": 0
+      },
+      "properties": {
+        "snapshot": 13,
+        "current": 13,
+        "delta": 0
+      },
+      "doi": {
+        "snapshot": "",
+        "current": "",
+        "status": "不变"
+      },
+      "phase_filled": {
+        "snapshot_rate": 1.0,
+        "current_rate": 1.0,
+        "delta": 0.0
+      },
+      "process_unknown": {
+        "snapshot_rate": 1.0,
+        "current_rate": 1.0,
+        "delta": 0.0
+      }
+    }
+  ]
+}

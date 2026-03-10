@@ -1,0 +1,13 @@
+{
+  "paper_name": "4-2025-IJP-Ni₆₁.₃Cr₂₅.₃W₄.₄Mo₁.₄Fe₁.₇Co₁.₄Al₁.₁Mn₀.₄Si₀.₇C₂.₅La₀.₀₁₃",
+  "pipeline_version": "knowmat-2.0.1",
+  "materials_target_count": 1,
+  "samples_count": 1,
+  "properties_count": 20,
+  "unknown_process_count": 0,
+  "phase_filled_rate": 1.0,
+  "missing_doi": 1,
+  "needs_review": false,
+  "red_line_triggers": [],
+  "final_confidence_score": null
+}

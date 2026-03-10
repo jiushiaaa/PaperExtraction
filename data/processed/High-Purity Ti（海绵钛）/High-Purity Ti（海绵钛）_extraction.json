@@ -1,0 +1,44 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "schema_version": "2.1",
+  "pipeline_version": "knowmat-2.0.1",
+  "Materials": [
+    {
+      "description": "--- Material 1: Ti ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "Ti",
+      "Formula_Normalized": "Ti",
+      "Composition_JSON": {},
+      "Source_DOI": "10.1007/978-3-319-24234-9_10",
+      "Source_File": "High-Purity Ti（海绵钛）.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_01_Default",
+          "Process_Category": "AM_DED",
+          "Process_Text_For_AI": "not provided",
+          "Key_Params_JSON": {},
+          "Main_Phase": "alpha",
+          "Microstructure_Text_For_AI": "xrd: X-ray diffraction used to identify crystal structure; sem: Scanning electron microscopy for microstructure analysis; tem: Transmission electron microscopy for detailed microstructure; eds: Energy-dispersive X-ray spectroscopy for elemental analysis",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": 3.0,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 293,
+              "Property_Type": "Density",
+              "Property_Value": 4.507,
+              "Property_Unit": "g/cm3"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": null,
+              "Property_Type": "grain_size_avg_um",
+              "Property_Value": 3.0,
+              "Property_Unit": "micrometers"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

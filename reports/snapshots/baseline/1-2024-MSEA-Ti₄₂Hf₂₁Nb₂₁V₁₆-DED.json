@@ -1,0 +1,153 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "Materials": [
+    {
+      "description": "--- Material 1: Ti42Hf21Nb21V16 (T42) ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "Ti42Hf21Nb21V16 (T42)",
+      "Formula_Normalized": "Ti42Hf21Nb21V16(T42)",
+      "Composition_JSON": {
+        "Ti": 42.0,
+        "Hf": 21.0,
+        "Nb": 21.0,
+        "V": 16.0,
+        "T": 42.0
+      },
+      "Source_DOI": "",
+      "Source_File": "1-2024-MSEA-Ti₄₂Hf₂₁Nb₂₁V₁₆-DED.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_AutoExtracted",
+          "Process_Category": "AM_DED",
+          "Process_Text_For_AI": "LENS (laser-engineered net shaping) with remelting procedure; scanning speed: 5 mm/s; hatching space: 381 μm; working laser power: 550 W; remelting power: 800 W; layer thickness: 200 μm; argon atmosphere with oxygen content below 200 ppm; powder particle size: ~81 μm",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: XRD (x-ray diffraction) with Cu Kα radiation (λ = 1.54 Å); technique_2: SEM (scanning electron microscopy) with EBSD (electron back-scattered diffraction); technique_3: TEM (transmission electron microscopy) with EDX (energy-dispersive X-ray); technique_4: APT (3D atom probe tomography); technique_5: PDF (pair distribution function) analysis with Ag Kα radiation (λ = 0.56 Å); technique_6: First-principles calculations (CASTEP package with VCA method); technique_7: Tensile testing at various temperatures (RT, 673 K, 773 K, 873 K, 1073 K) with strain rate 1×10⁻³ s⁻¹; technique_8: High-temperature oxidation testing at 1073 K for various durations (1-120 h)",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": null,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1030.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": null,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 22.5,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 673.0,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 681.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 673.0,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 27.8,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 773.0,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 661.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 773.0,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 16.8,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 873.0,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 635.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 873.0,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 7.5,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": null,
+              "Property_Type": "local_lattice_strain",
+              "Property_Value": 3.68,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": null,
+              "Property_Type": "lattice_constant",
+              "Property_Value": 3.32626,
+              "Property_Unit": "Å"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": null,
+              "Property_Type": "Young_s_modulus",
+              "Property_Value": 105.99,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T012",
+              "Test_Temperature_K": 673.0,
+              "Property_Type": "Young_s_modulus",
+              "Property_Value": 106.26,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T013",
+              "Test_Temperature_K": 773.0,
+              "Property_Type": "Young_s_modulus",
+              "Property_Value": 106.18,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T014",
+              "Test_Temperature_K": 873.0,
+              "Property_Type": "Young_s_modulus",
+              "Property_Value": 106.03,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T015",
+              "Test_Temperature_K": 1073.0,
+              "Property_Type": "Young_s_modulus",
+              "Property_Value": 105.55,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T017",
+              "Test_Temperature_K": null,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 200.0,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T018",
+              "Test_Temperature_K": null,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 400.0,
+              "Property_Unit": "μm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

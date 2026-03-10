@@ -1,0 +1,119 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "Materials": [
+    {
+      "description": "--- Material 1: FeCoCrNiMo₀.₅ ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "FeCoCrNiMo₀.₅",
+      "Formula_Normalized": "FeCoCrNiMo₀.₅",
+      "Composition_JSON": {},
+      "Source_DOI": "",
+      "Source_File": "6-2024-MSEA- FeCoCrNiMo0.5.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_AutoExtracted",
+          "Process_Category": "Unknown",
+          "Process_Text_For_AI": "substrate preheating temperature = 120 °C; laser power = 200 W; line spacing = 80 μm; point spacing = 60 μm; exposure time = 80 μs; wavelength = 1070 nm; layer thickness = 40 μm; interlayer rotation angle = 67°",
+          "Key_Params_JSON": {},
+          "Main_Phase": "FCC",
+          "Microstructure_Text_For_AI": "SEM: powder particle size (15–53 μm); fracture surface morphology; EBSD: grain boundary misorientation analysis; cracked GB analysis; EDS: chemical composition analysis; BF-TEM: crystal structure; dislocation morphology; σ phase identification; SAED: phase identification (FCC matrix, tetragonal σ phase); XRD: lattice parameter; stacking fault energy calculation; Tensile testing: engineering stress-strain curves at 600, 700, 800 °C; strain rate = 8.33 × 10⁻⁵ s⁻¹",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": null,
+              "Property_Type": "ultimate_tensile_strength",
+              "Property_Value": 1110.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": null,
+              "Property_Type": "elongation",
+              "Property_Value": 30.1,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 873.15,
+              "Property_Type": "ultimate_tensile_strength_increase",
+              "Property_Value": 90.1,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 873.15,
+              "Property_Type": "yield_strength_increase",
+              "Property_Value": 46.3,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": 973.15,
+              "Property_Type": "ultimate_tensile_strength_increase",
+              "Property_Value": 102.1,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T012",
+              "Test_Temperature_K": 973.15,
+              "Property_Type": "yield_strength_increase",
+              "Property_Value": 85.5,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T015",
+              "Test_Temperature_K": 1073.15,
+              "Property_Type": "elongation",
+              "Property_Value": 14.1,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T016",
+              "Test_Temperature_K": 1073.15,
+              "Property_Type": "ultimate_tensile_strength_increase",
+              "Property_Value": 146.6,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T017",
+              "Test_Temperature_K": 1073.15,
+              "Property_Type": "elongation_increase",
+              "Property_Value": 137.6,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T018",
+              "Test_Temperature_K": null,
+              "Property_Type": "stacking_fault_energy",
+              "Property_Value": 17.9,
+              "Property_Unit": "mJ/m²"
+            },
+            {
+              "Test_ID": "T019",
+              "Test_Temperature_K": null,
+              "Property_Type": "shear_modulus",
+              "Property_Value": 90.34,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T020",
+              "Test_Temperature_K": null,
+              "Property_Type": "grain_boundary_misorientation",
+              "Property_Value": 33.0276,
+              "Property_Unit": "°"
+            },
+            {
+              "Test_ID": "T021",
+              "Test_Temperature_K": null,
+              "Property_Type": "grain_boundary_angle_distribution",
+              "Property_Value": 80.7,
+              "Property_Unit": "%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

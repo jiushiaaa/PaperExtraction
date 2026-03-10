@@ -1,0 +1,13 @@
+{
+  "paper_name": "15-5PH(Fe-15Cr-4.5Ni-0.3Cb-3.5Cu)",
+  "pipeline_version": "knowmat-2.0.1",
+  "materials_target_count": 1,
+  "samples_count": 1,
+  "properties_count": 4,
+  "unknown_process_count": 0,
+  "phase_filled_rate": 1.0,
+  "missing_doi": 1,
+  "needs_review": false,
+  "red_line_triggers": [],
+  "final_confidence_score": null
+}

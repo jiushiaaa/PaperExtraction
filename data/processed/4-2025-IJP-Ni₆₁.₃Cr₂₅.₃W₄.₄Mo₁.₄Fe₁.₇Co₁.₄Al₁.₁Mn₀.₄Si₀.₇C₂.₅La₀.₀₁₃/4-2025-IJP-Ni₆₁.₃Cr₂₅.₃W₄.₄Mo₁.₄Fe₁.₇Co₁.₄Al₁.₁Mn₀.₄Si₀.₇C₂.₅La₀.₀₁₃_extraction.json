@@ -1,0 +1,182 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "schema_version": "2.1",
+  "pipeline_version": "knowmat-2.0.1",
+  "Materials": [
+    {
+      "description": "--- Material 1: Ni21.49Cr13.13W2.22Mo1.57Fe1.30Co0.46Al0.34Mn0.30Si0.30La0.029C0.48 ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "Ni-21.49Cr-13.13W-2.22Mo-1.57Fe-1.30Co-0.46Al-0.34Mn-0.30Si-0.029La-0.48C (wt%)",
+      "Formula_Normalized": "Ni21.49Cr13.13W2.22Mo1.57Fe1.30Co0.46Al0.34Mn0.30Si0.30La0.029C0.48",
+      "Composition_JSON": {
+        "Ni": 21.49,
+        "Cr": 13.13,
+        "W": 2.22,
+        "Mo": 1.57,
+        "Fe": 1.3,
+        "Co": 0.46,
+        "Al": 0.34,
+        "Mn": 0.3,
+        "Si": 0.3,
+        "La": 0.029,
+        "C": 0.48
+      },
+      "Source_DOI": "",
+      "Source_File": "4-2025-IJP-Ni₆₁.₃Cr₂₅.₃W₄.₄Mo₁.₄Fe₁.₇Co₁.₄Al₁.₁Mn₀.₄Si₀.₇C₂.₅La₀.₀₁₃.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_01_Default",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Laser powder bed fusion (LPBF) with 190 W laser power, 900 mm/s scanning speed, 110 μm hatch spacing, 40 μm layer thickness; Solid-solution heat treatment at 1150°C for 2 h",
+          "Key_Params_JSON": {},
+          "Main_Phase": "FCC",
+          "Microstructure_Text_For_AI": "technique_1: XRD (SmartLab 3 kW diffractometer, Cu Kα radiation); technique_2: EBSD (JSM-7800F SEM, 20 kV, 1 μm step size)",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": 14.5,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1121.5,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 8.2,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1026.5,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 4.2,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 775.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 12.6,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 773.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 12.8,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": 1173,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 341.5,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": 1173,
+              "Property_Type": "Elongation",
+              "Property_Value": 7.7,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": 1173,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 364.3,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T012",
+              "Test_Temperature_K": 1173,
+              "Property_Type": "Elongation",
+              "Property_Value": 15.5,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T013",
+              "Test_Temperature_K": 1173,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 275.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T014",
+              "Test_Temperature_K": 1173,
+              "Property_Type": "Elongation",
+              "Property_Value": 20.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T015",
+              "Test_Temperature_K": 1173,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 273.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T016",
+              "Test_Temperature_K": 1173,
+              "Property_Type": "Elongation",
+              "Property_Value": 47.5,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T017",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 14.5,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T018",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 8.2,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T019",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 13.5,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T020",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 8.8,
+              "Property_Unit": "μm"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "paper_name": "2-2025-Acta-Nb₁₅Ta₁₀W₇₅---添加NbC 纳米沉淀",
+  "pipeline_version": "knowmat-2.0.1",
+  "materials_target_count": 2,
+  "samples_count": 8,
+  "properties_count": 144,
+  "unknown_process_count": 0,
+  "phase_filled_rate": 1.0,
+  "missing_doi": 1,
+  "needs_review": false,
+  "red_line_triggers": [],
+  "final_confidence_score": null
+}

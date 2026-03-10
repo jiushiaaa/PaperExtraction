@@ -1,0 +1,49 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "schema_version": "2.1",
+  "pipeline_version": "knowmat-2.0.1",
+  "Materials": [
+    {
+      "description": "--- Material 1: Ti6Al2Sn4Zr2Mo ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "Ti-6Al-2Sn-4Zr-2Mo",
+      "Formula_Normalized": "Ti6Al2Sn4Zr2Mo",
+      "Composition_JSON": {
+        "Ti": 6.0,
+        "Al": 2.0,
+        "Sn": 4.0,
+        "Zr": 2.0
+      },
+      "Source_DOI": "",
+      "Source_File": "Ti-6-2-4-2(Ti-6Al-2Sn-4Zr-2Mo).txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_01_Default",
+          "Process_Category": "AM_DED",
+          "Process_Text_For_AI": "not provided",
+          "Key_Params_JSON": {},
+          "Main_Phase": "HCP",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": null,
+              "Property_Type": "Density",
+              "Property_Value": 4.54,
+              "Property_Unit": "g/cm³"
+            },
+            {
+              "Test_ID": "T019",
+              "Test_Temperature_K": null,
+              "Property_Type": "fracture_toughness",
+              "Property_Value": 52.0,
+              "Property_Unit": "ksi-in^1/2"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

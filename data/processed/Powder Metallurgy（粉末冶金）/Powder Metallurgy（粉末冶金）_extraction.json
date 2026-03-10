@@ -1,0 +1,896 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "schema_version": "2.1",
+  "pipeline_version": "knowmat-2.0.1",
+  "Materials": [
+    {
+      "description": "--- Material 1: Ti10V2Al3 ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "Ti-10-2-3 [As HIP 1400 °F]",
+      "Formula_Normalized": "Ti10V2Al3",
+      "Composition_JSON": {
+        "Ti": 10.0,
+        "V": 2.0,
+        "Al": 3.0
+      },
+      "Source_DOI": "",
+      "Source_File": "Powder Metallurgy（粉末冶金）.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_01_As_HIP_1400_°F",
+          "Process_Category": "SPS",
+          "Process_Text_For_AI": "HIP 1400 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 208.8,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 188.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 3.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 15.0,
+              "Property_Unit": "10^6 psi"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S001_02_1410_°F_1_h_WQ_+_900_°F_8_h",
+          "Process_Category": "SPS",
+          "Process_Text_For_AI": "HIP 1400 °F; 1410 °F 1 h WQ + 900 °F 8 h",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 186.7,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 172.5,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 11.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 14.7,
+              "Property_Unit": "10^6 psi"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S001_03_As_HIP_1325_°F",
+          "Process_Category": "SPS",
+          "Process_Text_For_AI": "HIP 1325 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 154.9,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 143.4,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 14.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 14.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 12.0,
+              "Property_Unit": "10^6 psi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "--- Material 2: Ti13V11Cr3Al ---",
+      "Mat_ID": "M002",
+      "Alloy_Name_Raw": "Alloy 253 [1375 °F 5 h WQ + 950 °F 8 h]",
+      "Formula_Normalized": "Ti13V11Cr3Al",
+      "Composition_JSON": {
+        "Ti": 13.0,
+        "V": 11.0,
+        "Cr": 3.0
+      },
+      "Source_DOI": "",
+      "Source_File": "Powder Metallurgy（粉末冶金）.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S002_01_1375_°F_5_h_WQ_+_950_°F_8_h",
+          "Process_Category": "SPS",
+          "Process_Text_For_AI": "HIP 1400 °F; 1375 °F 5 h WQ + 950 °F 8 h",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 181.7,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 166.4,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 8.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 14.0,
+              "Property_Unit": "10^6 psi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "--- Material 3: Ti1Al8V5Fe ---",
+      "Mat_ID": "M003",
+      "Alloy_Name_Raw": "Ti-1Al-8V-5Fe [As-Built]",
+      "Formula_Normalized": "Ti1Al8V5Fe",
+      "Composition_JSON": {
+        "Ti": 1.0,
+        "Al": 8.0,
+        "V": 5.0
+      },
+      "Source_DOI": "",
+      "Source_File": "Powder Metallurgy（粉末冶金）.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S003_01_As-Built",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; HIP 1500 °F; Extruded 1500 °F 6:1",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 220.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 212.4,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 7.8,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 19.5,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_02_HIP_1500_°F",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; HIP 1500 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 217.9,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 207.7,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 7.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 15.5,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_03_Extruded_1200_°F_10:1",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; Extruded 1200 °F 10:1",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 225.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 221.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 2.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 4.0,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_04_Extruded_1500_°F_6:1",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; Extruded 1500 °F 6:1",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 222.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 212.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 9.4,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 15.0,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_05_HIP_1600_°F",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; HIP 1600 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 217.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 205.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 1.6,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 7.5,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_06_HIP_1500_°F",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; HIP 1500 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 163.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 153.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 15.6,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 37.8,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_07_HIP_1475_°F",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; HIP 1475 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 1155.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1075.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 9.4,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 19.9,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_08_HIP_1475_°F",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; HIP 1475 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 1015.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 960.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 16.4,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 37.2,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_09_HIP_1475_°F",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; HIP 1475 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 1414.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1315.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 4.7,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 9.9,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_10_HIP_1475_°F",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; HIP 1475 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 1175.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1111.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 10.9,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 24.3,
+              "Property_Unit": "%"
+            }
+          ]
+        },
+        {
+          "Sample_ID": "S003_11_HIP_1400_°F",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomization; HIP 1400 °F",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 128.5,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 119.2,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 22.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 13.4,
+              "Property_Unit": "10^6 psi"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "--- Material 4: Ti6Al2Sn4Zr2Mo0.1Si ---",
+      "Mat_ID": "M004",
+      "Alloy_Name_Raw": "Ti-6Al-2Sn-4Zr-2Mo-0.1Si",
+      "Formula_Normalized": "Ti6Al2Sn4Zr2Mo0.1Si",
+      "Composition_JSON": {
+        "Ti": 6.0,
+        "Al": 2.0,
+        "Sn": 4.0,
+        "Zr": 2.0,
+        "Mo": 0.1
+      },
+      "Source_DOI": "",
+      "Source_File": "Powder Metallurgy（粉末冶金）.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S004_01_Default",
+          "Process_Category": "AM_LPBF",
+          "Process_Text_For_AI": "Gas atomized; HIP 1700 °F 14 ksi 4 h; solution treat 1 h 1765 °F AC; age 8 h 1100 °F AC",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 151.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 755,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 104.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 135.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 755,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 82.0,
+              "Property_Unit": "ksi"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Elongation",
+              "Property_Value": 19.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 755,
+              "Property_Type": "Elongation",
+              "Property_Value": 12.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 298,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 42.5,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 755,
+              "Property_Type": "reduction_of_area",
+              "Property_Value": 20.2,
+              "Property_Unit": "%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "--- Material 5: TiC0.1Ti6Al4V ---",
+      "Mat_ID": "M005",
+      "Alloy_Name_Raw": "CermeTi-C-10 10 wt% TiC/Ti-6Al-4V",
+      "Formula_Normalized": "TiC0.1Ti6Al4V",
+      "Composition_JSON": {
+        "C": 0.1,
+        "Ti": 6.0,
+        "Al": 4.0
+      },
+      "Source_DOI": "",
+      "Source_File": "Powder Metallurgy（粉末冶金）.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S005_01_Default",
+          "Process_Category": "AM_DED",
+          "Process_Text_For_AI": "HIP consolidation; sintering",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": true,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 999.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 813,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 551.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 133.0,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 813,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 105.0,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 298,
+              "Property_Type": "fracture_toughness",
+              "Property_Value": 44.0,
+              "Property_Unit": "MPa/m"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 298,
+              "Property_Type": "hardness",
+              "Property_Value": 40.0,
+              "Property_Unit": "HRC"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Density",
+              "Property_Value": 4.45,
+              "Property_Unit": "g/cm³"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "--- Material 6: TiC0.2Ti6Al4V ---",
+      "Mat_ID": "M006",
+      "Alloy_Name_Raw": "CermeTi-C-20 20 wt% TiC/Ti-6Al-4V",
+      "Formula_Normalized": "TiC0.2Ti6Al4V",
+      "Composition_JSON": {
+        "C": 0.2,
+        "Ti": 6.0,
+        "Al": 4.0
+      },
+      "Source_DOI": "",
+      "Source_File": "Powder Metallurgy（粉末冶金）.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S006_01_Default",
+          "Process_Category": "AM_DED",
+          "Process_Text_For_AI": "HIP consolidation; sintering",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: not provided; technique_2: not provided",
+          "Has_Precipitates": true,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 1055.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 813,
+              "Property_Type": "Ultimate_Tensile_Strength",
+              "Property_Value": 620.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 144.0,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 813,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 110.0,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 298,
+              "Property_Type": "fracture_toughness",
+              "Property_Value": 32.0,
+              "Property_Unit": "MPa/m"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 298,
+              "Property_Type": "hardness",
+              "Property_Value": 44.0,
+              "Property_Unit": "HRC"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Density",
+              "Property_Value": 4.52,
+              "Property_Unit": "g/cm³"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

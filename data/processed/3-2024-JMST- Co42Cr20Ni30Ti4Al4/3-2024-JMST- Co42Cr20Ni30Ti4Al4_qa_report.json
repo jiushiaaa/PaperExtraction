@@ -1,0 +1,13 @@
+{
+  "paper_name": "3-2024-JMST- Co42Cr20Ni30Ti4Al4",
+  "pipeline_version": "knowmat-2.0.1",
+  "materials_target_count": 1,
+  "samples_count": 2,
+  "properties_count": 27,
+  "unknown_process_count": 0,
+  "phase_filled_rate": 1.0,
+  "missing_doi": 0,
+  "needs_review": false,
+  "red_line_triggers": [],
+  "final_confidence_score": null
+}

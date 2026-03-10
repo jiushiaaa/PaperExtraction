@@ -1,0 +1,168 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "schema_version": "2.1",
+  "pipeline_version": "knowmat-2.0.1",
+  "Materials": [
+    {
+      "description": "--- Material 1: Ti42Hf21Nb21V16 ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "Ti42Hf21Nb21V16 [As-Built]",
+      "Formula_Normalized": "Ti42Hf21Nb21V16",
+      "Composition_JSON": {
+        "Ti": 42.0,
+        "Hf": 21.0,
+        "Nb": 21.0,
+        "V": 16.0
+      },
+      "Source_DOI": "",
+      "Source_File": "1-2024-MSEA-Ti₄₂Hf₂₁Nb₂₁V₁₆-DED.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_01_As-Built",
+          "Process_Category": "AM_DED",
+          "Process_Text_For_AI": "LENS process: scanning speed 5 mm/s, hatching space 381 μm, laser power 550 W, remelting power 800 W, layer thickness 200 μm, Ar atmosphere with oxygen below 200 ppm",
+          "Key_Params_JSON": {},
+          "Main_Phase": "BCC",
+          "Microstructure_Text_For_AI": "XRD: single BCC phase structure; EBSD: equiaxed grains in XY plane (200 μm), columnar crystals in XZ plane (400 μm), <001>//(110) texture; TEM: lattice distortion observed, no secondary phases; APT: nano-scale composition heterogeneity, local chemical fluctuations; PDF analysis: local lattice strain of 3.68%",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": 200.0,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1030.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 22.5,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": 673,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 681.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": 673,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 27.8,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": 773,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 661.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": 773,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 16.8,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 635.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 7.5,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 105.99,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": 673,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 106.26,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": 773,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 106.18,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T012",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 106.03,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T013",
+              "Test_Temperature_K": 1073,
+              "Property_Type": "Youngs_Modulus",
+              "Property_Value": 105.55,
+              "Property_Unit": "GPa"
+            },
+            {
+              "Test_ID": "T014",
+              "Test_Temperature_K": 298,
+              "Property_Type": "Lattice_Parameter",
+              "Property_Value": 3.3176,
+              "Property_Unit": "Å"
+            },
+            {
+              "Test_ID": "T015",
+              "Test_Temperature_K": 673,
+              "Property_Type": "Lattice_Parameter",
+              "Property_Value": 3.3293,
+              "Property_Unit": "Å"
+            },
+            {
+              "Test_ID": "T016",
+              "Test_Temperature_K": 773,
+              "Property_Type": "Lattice_Parameter",
+              "Property_Value": 3.3321,
+              "Property_Unit": "Å"
+            },
+            {
+              "Test_ID": "T017",
+              "Test_Temperature_K": 873,
+              "Property_Type": "Lattice_Parameter",
+              "Property_Value": 3.335,
+              "Property_Unit": "Å"
+            },
+            {
+              "Test_ID": "T018",
+              "Test_Temperature_K": 1073,
+              "Property_Type": "Lattice_Parameter",
+              "Property_Value": 3.3408,
+              "Property_Unit": "Å"
+            },
+            {
+              "Test_ID": "T019",
+              "Test_Temperature_K": 298,
+              "Property_Type": "local_lattice_strain",
+              "Property_Value": 3.68,
+              "Property_Unit": "%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

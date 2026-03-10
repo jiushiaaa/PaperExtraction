@@ -1,0 +1,298 @@
+{
+    "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+    "Materials": [
+      {
+        "description": "--- 第1种合金 (Material 1): Ti-Hf-Nb-V Refractory HEA ---",
+        "Mat_ID": "M001",
+        "Alloy_Name_Raw": "Ti42Hf21Nb21V16 (T42)",
+        "Formula_Normalized": "Ti42Hf21Nb21V16",
+        "Composition_JSON": {
+          "Ti": 42.0,
+          "Hf": 21.0,
+          "Nb": 21.0,
+          "V": 16.0
+        },
+        "Source_DOI": "10.1016/j.msea.2024.147225",
+        "Processed_Samples": [
+          {
+            "Sample_ID": "S001_DED_AsFabricated",
+            "Process_Category": "AM_DED",
+            "Process_Text_For_AI": "Fabricated via Laser-Engineered Net Shaping (LENS/DED). Ultra-high energy input remelting procedure used. Atmosphere: Argon (O < 200 ppm).",
+            "Key_Params_JSON": {
+              "Laser_Power_W": 550,
+              "Remelting_Power_W": 800,
+              "Scanning_Speed_mm_s": 5,
+              "Hatch_Spacing_um": 381,
+              "Layer_Thickness_um": 200,
+              "Oxygen_Content_ppm": "below 200"
+            },
+            "Main_Phase": "BCC",
+            "Microstructure_Text_For_AI": "Single BCC phase. XY plane shows equiaxed grains (~200 um); XZ plane shows columnar grains. Strong <001> texture along build direction. High local lattice distortion (3.68%).",
+            "Has_Precipitates": false,
+            "Grain_Size_avg_um": 200.0,
+            "Performance_Tests": [
+              {
+                "Test_ID": "T001_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 1030.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T002_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Fracture_Strain",
+                "Property_Value": 22.5,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T003_673K",
+                "Test_Temperature_K": 673,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 681.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T004_673K",
+                "Test_Temperature_K": 673,
+                "Property_Type": "Fracture_Strain",
+                "Property_Value": 27.8,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T005_773K",
+                "Test_Temperature_K": 773,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 661.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T006_773K",
+                "Test_Temperature_K": 773,
+                "Property_Type": "Fracture_Strain",
+                "Property_Value": 16.8,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T007_873K",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 635.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T008_873K",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Fracture_Strain",
+                "Property_Value": 7.5,
+                "Property_Unit": "%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "--- 第2种合金 (Material 2): Ni-Cr-W-Mo Superalloy (SD3230) ---",
+        "Mat_ID": "M002",
+        "Alloy_Name_Raw": "SD3230",
+        "Formula_Normalized": "Ni61.3Cr25.3W4.4Mo1.4Fe1.7Co1.4Al1.1Mn0.4Si0.7C2.5La0.013",
+        "Composition_JSON": {
+          "Ni": 61.3,
+          "Cr": 25.3,
+          "W": 4.4,
+          "Mo": 1.4,
+          "Fe": 1.7,
+          "Co": 1.4,
+          "Al": 1.1,
+          "Mn": 0.4,
+          "Si": 0.7,
+          "C": 2.5,
+          "La": 0.013
+        },
+        "Source_DOI": "10.1016/j.ijplas.2025.104409",
+        "Processed_Samples": [
+          {
+            "Sample_ID": "S001_AB_Horizontal",
+            "Process_Category": "AM_LPBF",
+            "Process_Text_For_AI": "Laser Powder Bed Fusion (LPBF). As-Built state. Loading direction perpendicular to build direction (Horizontal).",
+            "Key_Params_JSON": {
+              "Laser_Power_W": 190,
+              "Scanning_Speed_mm_s": 900,
+              "Hatch_Spacing_um": 110,
+              "Layer_Thickness_um": 40,
+              "Scanning_Strategy": "Zig-zag with 90 deg rotation",
+              "Loading_Direction": "Horizontal (Perpendicular to BD)"
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Periodic columnar-to-crescent grains. High dislocation density at sub-grain boundaries.",
+            "Has_Precipitates": false,
+            "Grain_Size_avg_um": 14.5,
+            "Performance_Tests": [
+              {
+                "Test_ID": "T001_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 1121.5,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T002_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Elongation",
+                "Property_Value": 8.2,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T003_900C",
+                "Test_Temperature_K": 1173,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 341.5,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T004_900C",
+                "Test_Temperature_K": 1173,
+                "Property_Type": "Elongation",
+                "Property_Value": 7.7,
+                "Property_Unit": "%"
+              }
+            ]
+          },
+          {
+            "Sample_ID": "S002_AB_Vertical",
+            "Process_Category": "AM_LPBF",
+            "Process_Text_For_AI": "Laser Powder Bed Fusion (LPBF). As-Built state. Loading direction parallel to build direction (Vertical).",
+            "Key_Params_JSON": {
+              "Laser_Power_W": 190,
+              "Scanning_Speed_mm_s": 900,
+              "Hatch_Spacing_um": 110,
+              "Layer_Thickness_um": 40,
+              "Loading_Direction": "Vertical (Parallel to BD)"
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Periodic columnar-to-crescent grains. High dislocation density.",
+            "Has_Precipitates": false,
+            "Grain_Size_avg_um": 8.2,
+            "Performance_Tests": [
+              {
+                "Test_ID": "T005_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 1026.5,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T006_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Elongation",
+                "Property_Value": 4.2,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T007_900C",
+                "Test_Temperature_K": 1173,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 364.3,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T008_900C",
+                "Test_Temperature_K": 1173,
+                "Property_Type": "Elongation",
+                "Property_Value": 15.5,
+                "Property_Unit": "%"
+              }
+            ]
+          },
+          {
+            "Sample_ID": "S003_HT_Horizontal",
+            "Process_Category": "HeatTreat",
+            "Process_Text_For_AI": "Solution heat treatment at 1150°C for 2h, Air Cooled (presumed). Loading Horizontal.",
+            "Key_Params_JSON": {
+              "Temp_C": 1150,
+              "Time_h": 2,
+              "Loading_Direction": "Horizontal"
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Similar grain morphology to As-Built (Columnar-to-crescent) but significantly reduced dislocation density.",
+            "Has_Precipitates": false,
+            "Grain_Size_avg_um": 13.5,
+            "Performance_Tests": [
+              {
+                "Test_ID": "T009_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 775.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T010_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Elongation",
+                "Property_Value": 12.6,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T011_900C",
+                "Test_Temperature_K": 1173,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 275.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T012_900C",
+                "Test_Temperature_K": 1173,
+                "Property_Type": "Elongation",
+                "Property_Value": 20.0,
+                "Property_Unit": "%"
+              }
+            ]
+          },
+          {
+            "Sample_ID": "S004_HT_Vertical",
+            "Process_Category": "HeatTreat",
+            "Process_Text_For_AI": "Solution heat treatment at 1150°C for 2h. Loading Vertical.",
+            "Key_Params_JSON": {
+              "Temp_C": 1150,
+              "Time_h": 2,
+              "Loading_Direction": "Vertical"
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Similar grain morphology to As-Built but reduced dislocations.",
+            "Has_Precipitates": false,
+            "Grain_Size_avg_um": 8.8,
+            "Performance_Tests": [
+              {
+                "Test_ID": "T013_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 773.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T014_RT",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Elongation",
+                "Property_Value": 12.8,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T015_900C",
+                "Test_Temperature_K": 1173,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 273.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T016_900C",
+                "Test_Temperature_K": 1173,
+                "Property_Type": "Elongation",
+                "Property_Value": 47.5,
+                "Property_Unit": "%"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

@@ -1,0 +1,13 @@
+{
+  "paper_name": "Ti-6-2-4-2(Ti-6Al-2Sn-4Zr-2Mo)",
+  "pipeline_version": "knowmat-2.0.1",
+  "materials_target_count": 1,
+  "samples_count": 1,
+  "properties_count": 2,
+  "unknown_process_count": 0,
+  "phase_filled_rate": 1.0,
+  "missing_doi": 1,
+  "needs_review": false,
+  "red_line_triggers": [],
+  "final_confidence_score": null
+}

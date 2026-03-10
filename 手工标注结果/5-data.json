@@ -1,0 +1,369 @@
+{
+    "Dataset_Description": "High Entropy Alloy Data Extraction from 'Multiscale plastic deformation in additively manufactured FeCoCrNiMox high-entropy alloys'",
+    "Materials": [
+      {
+        "description": "--- Material 1: FeCoCrNi (Mo0) ---",
+        "Mat_ID": "Mo0",
+        "Alloy_Name_Raw": "FeCoCrNi (Mo0)",
+        "Formula_Normalized": "Fe25Co25Cr25Ni25",
+        "Composition_JSON": {
+          "Fe": 25.0,
+          "Co": 25.0,
+          "Cr": 25.0,
+          "Ni": 25.0,
+          "Mo": 0.0
+        },
+        "Source_DOI": "10.1016/j.ijplas.2024.104142",
+        "Processed_Samples": [
+          {
+            "Sample_ID": "Mo0_AsBuilt",
+            "Process_Category": "Additive_Manufacturing",
+            "Process_Text_For_AI": "Laser Powder Bed Fusion (L-PBF). Parameters: laser power 200 W, scanning speed 750 mm/s, hatch spacing 80 μm, layer thickness 40 μm, rotation 67°, preheating 120°C.",
+            "Key_Params_JSON": {
+              "Method": "L-PBF",
+              "Laser_Power_W": 200,
+              "Scanning_Speed_mm_s": 750,
+              "Hatch_Spacing_um": 80,
+              "Layer_Thickness_um": 40,
+              "Preheating_Temp_C": 120
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Epitaxial columnar grains growing along z-direction. 100<111> texture. Dislocation cell patterns are not obvious. No serrated flow behavior.",
+            "Has_Precipitates": false,
+            "Grain_Size_avg_um": 35.1,
+            "Performance_Tests": [
+              {
+                "Test_ID": "Mo0_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 566,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo0_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 719,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo0_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Uniform_Elongation",
+                "Property_Value": 18.15,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo0_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Total_Elongation",
+                "Property_Value": 19.82,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo0_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 398,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo0_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 420,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo0_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Uniform_Elongation",
+                "Property_Value": 1.20,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo0_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Total_Elongation",
+                "Property_Value": 1.25,
+                "Property_Unit": "%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "--- Material 2: FeCoCrNiMo0.1 (Mo1) ---",
+        "Mat_ID": "Mo1",
+        "Alloy_Name_Raw": "FeCoCrNiMo0.1 (Mo1)",
+        "Formula_Normalized": "Fe24.39Co24.39Cr24.39Ni24.39Mo2.44",
+        "Composition_JSON": {
+          "Fe": 24.39,
+          "Co": 24.39,
+          "Cr": 24.39,
+          "Ni": 24.39,
+          "Mo": 2.44
+        },
+        "Source_DOI": "10.1016/j.ijplas.2024.104142",
+        "Processed_Samples": [
+          {
+            "Sample_ID": "Mo1_AsBuilt",
+            "Process_Category": "Additive_Manufacturing",
+            "Process_Text_For_AI": "Laser Powder Bed Fusion (L-PBF). Parameters: laser power 200 W, scanning speed 750 mm/s, hatch spacing 80 μm, layer thickness 40 μm, rotation 67°, preheating 120°C.",
+            "Key_Params_JSON": {
+              "Method": "L-PBF",
+              "Laser_Power_W": 200,
+              "Scanning_Speed_mm_s": 750,
+              "Hatch_Spacing_um": 80,
+              "Layer_Thickness_um": 40,
+              "Preheating_Temp_C": 120
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "More random grain orientation than Mo0. Dislocation cell walls become sharper (~200nm thick). Solute atom clusters exist (serrated flow at 600C).",
+            "Has_Precipitates": false,
+            "Grain_Size_avg_um": 47.4,
+            "Performance_Tests": [
+              {
+                "Test_ID": "Mo1_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 609,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo1_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 776,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo1_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Uniform_Elongation",
+                "Property_Value": 27.46,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo1_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Total_Elongation",
+                "Property_Value": 36.51,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo1_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 407,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo1_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 473,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo1_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Uniform_Elongation",
+                "Property_Value": 6.71,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo1_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Total_Elongation",
+                "Property_Value": 8.23,
+                "Property_Unit": "%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "--- Material 3: FeCoCrNiMo0.3 (Mo3) ---",
+        "Mat_ID": "Mo3",
+        "Alloy_Name_Raw": "FeCoCrNiMo0.3 (Mo3)",
+        "Formula_Normalized": "Fe23.25Co23.25Cr23.25Ni23.25Mo6.98",
+        "Composition_JSON": {
+          "Fe": 23.255,
+          "Co": 23.255,
+          "Cr": 23.255,
+          "Ni": 23.255,
+          "Mo": 6.98
+        },
+        "Source_DOI": "10.1016/j.ijplas.2024.104142",
+        "Processed_Samples": [
+          {
+            "Sample_ID": "Mo3_AsBuilt",
+            "Process_Category": "Additive_Manufacturing",
+            "Process_Text_For_AI": "Laser Powder Bed Fusion (L-PBF). Parameters: laser power 200 W, scanning speed 750 mm/s, hatch spacing 80 μm, layer thickness 40 μm, rotation 67°, preheating 120°C.",
+            "Key_Params_JSON": {
+              "Method": "L-PBF",
+              "Laser_Power_W": 200,
+              "Scanning_Speed_mm_s": 750,
+              "Hatch_Spacing_um": 80,
+              "Layer_Thickness_um": 40,
+              "Preheating_Temp_C": 120
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Dislocation cell walls ~100nm. Rod-shaped nanoscale sigma-phase precipitates at grain boundaries. Blocky mu-phase precipitates also observed. Twinning observed at elevated temp.",
+            "Has_Precipitates": true,
+            "Grain_Size_avg_um": 57.5,
+            "Performance_Tests": [
+              {
+                "Test_ID": "Mo3_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 698,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo3_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 953,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo3_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Uniform_Elongation",
+                "Property_Value": 25.02,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo3_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Total_Elongation",
+                "Property_Value": 27.78,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo3_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 477,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo3_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 661,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo3_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Uniform_Elongation",
+                "Property_Value": 19.35,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo3_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Total_Elongation",
+                "Property_Value": 22.98,
+                "Property_Unit": "%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "--- Material 4: FeCoCrNiMo0.5 (Mo5) ---",
+        "Mat_ID": "Mo5",
+        "Alloy_Name_Raw": "FeCoCrNiMo0.5 (Mo5)",
+        "Formula_Normalized": "Fe22.22Co22.22Cr22.22Ni22.22Mo11.11",
+        "Composition_JSON": {
+          "Fe": 22.22,
+          "Co": 22.22,
+          "Cr": 22.22,
+          "Ni": 22.22,
+          "Mo": 11.11
+        },
+        "Source_DOI": "10.1016/j.ijplas.2024.104142",
+        "Processed_Samples": [
+          {
+            "Sample_ID": "Mo5_AsBuilt",
+            "Process_Category": "Additive_Manufacturing",
+            "Process_Text_For_AI": "Laser Powder Bed Fusion (L-PBF). Parameters: laser power 200 W, scanning speed 750 mm/s, hatch spacing 70 μm, layer thickness 40 μm, rotation 67°, preheating 120°C.",
+            "Key_Params_JSON": {
+              "Method": "L-PBF",
+              "Laser_Power_W": 200,
+              "Scanning_Speed_mm_s": 750,
+              "Hatch_Spacing_um": 70,
+              "Layer_Thickness_um": 40,
+              "Preheating_Temp_C": 120
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Predominantly substructured and deformed grains. Cell wall thickness ~50nm. Significant rod-shaped sigma phase precipitates and blocky mu-phase precipitates.",
+            "Has_Precipitates": true,
+            "Grain_Size_avg_um": 51.9,
+            "Performance_Tests": [
+              {
+                "Test_ID": "Mo5_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 830,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo5_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 1091,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo5_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Uniform_Elongation",
+                "Property_Value": 19.38,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo5_RT_Tensile",
+                "Test_Temperature_K": 298,
+                "Property_Type": "Total_Elongation",
+                "Property_Value": 19.93,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo5_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 578,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo5_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 799,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "Mo5_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Uniform_Elongation",
+                "Property_Value": 11.16,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "Mo5_HT_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Total_Elongation",
+                "Property_Value": 11.33,
+                "Property_Unit": "%"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }

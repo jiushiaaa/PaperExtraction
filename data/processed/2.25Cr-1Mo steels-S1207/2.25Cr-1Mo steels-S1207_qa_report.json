@@ -1,0 +1,16 @@
+{
+  "paper_name": "2.25Cr-1Mo steels-S1207",
+  "pipeline_version": "knowmat-2.0.1",
+  "materials_target_count": 0,
+  "samples_count": 0,
+  "properties_count": 0,
+  "unknown_process_count": 0,
+  "phase_filled_rate": 0,
+  "missing_doi": 1,
+  "needs_review": true,
+  "red_line_triggers": [
+    "NO_TARGET_MATERIALS",
+    "NO_PROPERTIES"
+  ],
+  "final_confidence_score": null
+}

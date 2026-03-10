@@ -1,0 +1,63 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "schema_version": "2.1",
+  "pipeline_version": "knowmat-2.0.1",
+  "Materials": [
+    {
+      "description": "--- Material 1: Fe15Cr5Ni3Cu0.3Cb ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "15-5PH precipitation hardening stainless steel",
+      "Formula_Normalized": "Fe15Cr5Ni3Cu0.3Cb",
+      "Composition_JSON": {
+        "Fe": 15.0,
+        "Cr": 5.0,
+        "Ni": 3.0,
+        "Cu": 0.3
+      },
+      "Source_DOI": "",
+      "Source_File": "15-5PH(Fe-15Cr-4.5Ni-0.3Cb-3.5Cu).txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_01_Default",
+          "Process_Category": "Arc_Melting",
+          "Process_Text_For_AI": "Vacuum arc remelting; Solution treatment: 1900+25°F, 30-60 minutes, oil quench or air cool to below 90°F; Aging: 900-1150°F depending on properties desired",
+          "Key_Params_JSON": {},
+          "Main_Phase": "martensite",
+          "Microstructure_Text_For_AI": "technique_1: XRD; TEM; Electrical resistivity; Hardness testing; Tensile testing; Impact testing; Fatigue testing; Corrosion testing; technique_2: Metallography; Microstructural analysis; Mechanical testing",
+          "Has_Precipitates": true,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T016",
+              "Test_Temperature_K": null,
+              "Property_Type": "Poisson_s_ratio",
+              "Property_Value": 0.272,
+              "Property_Unit": null
+            },
+            {
+              "Test_ID": "T018",
+              "Test_Temperature_K": null,
+              "Property_Type": "martensite_start_temperature",
+              "Property_Value": 250.0,
+              "Property_Unit": "°F"
+            },
+            {
+              "Test_ID": "T019",
+              "Test_Temperature_K": null,
+              "Property_Type": "martensite_finish_temperature",
+              "Property_Value": 90.0,
+              "Property_Unit": "°F"
+            },
+            {
+              "Test_ID": "T020",
+              "Test_Temperature_K": null,
+              "Property_Type": "austenitizing_temperature",
+              "Property_Value": 1900.0,
+              "Property_Unit": "°F"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

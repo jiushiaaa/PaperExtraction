@@ -1,0 +1,13 @@
+{
+  "paper_name": "1-2024-MSEA-Ti₄₂Hf₂₁Nb₂₁V₁₆-DED",
+  "pipeline_version": "knowmat-2.0.1",
+  "materials_target_count": 1,
+  "samples_count": 1,
+  "properties_count": 19,
+  "unknown_process_count": 0,
+  "phase_filled_rate": 1.0,
+  "missing_doi": 1,
+  "needs_review": false,
+  "red_line_triggers": [],
+  "final_confidence_score": null
+}

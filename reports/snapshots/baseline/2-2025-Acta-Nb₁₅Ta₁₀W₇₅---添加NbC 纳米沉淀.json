@@ -1,0 +1,382 @@
+{
+  "Dataset_Description": "High Entropy Alloy Data Extraction Template",
+  "Materials": [
+    {
+      "description": "--- Material 1: Nb15Ta10W75 ---",
+      "Mat_ID": "M001",
+      "Alloy_Name_Raw": "Nb15Ta10W75",
+      "Formula_Normalized": "Nb15Ta10W75",
+      "Composition_JSON": {
+        "Nb": 15.0,
+        "Ta": 10.0,
+        "W": 75.0
+      },
+      "Source_DOI": "",
+      "Source_File": "2-2025-Acta-Nb₁₅Ta₁₀W₇₅---添加NbC 纳米沉淀.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S001_AutoExtracted",
+          "Process_Category": "Unknown",
+          "Process_Text_For_AI": "Laser powder bed fusion (LPBF) with optimum parameters: P = 300 W, v = 400 mm/s, t = 40 μm, h = 30 μm; processed in argon atmosphere with <100 ppm oxygen; substrate was pure tungsten plate heated to reduce stress",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: XRD (D8 Advance Da Vinci, Bruker Corp., USA) with Cu-Kα radiation (λ = 1.5418 Å) at 40 kV, 40 mA, scan range 20-100° at 1.5°/min; technique_2: SEM (FEI Co., Hillsboro, OR, USA) with EDS and EBSD detectors; EBSD at 20 kV with 0.1 μm scan step",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": null,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 759.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": null,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 939.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": null,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 2.6,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": null,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1409.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": null,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 1520.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": null,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 5.3,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 1273.15,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1009.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 1273.15,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 1451.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": 1273.15,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 15.9,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": 1473.15,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 942.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": 1473.15,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 1372.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T012",
+              "Test_Temperature_K": 1473.15,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 17.2,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T013",
+              "Test_Temperature_K": 1673.15,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 841.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T014",
+              "Test_Temperature_K": 1673.15,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 1242.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T015",
+              "Test_Temperature_K": 1673.15,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 14.4,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T016",
+              "Test_Temperature_K": 1873.15,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 640.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T017",
+              "Test_Temperature_K": 1873.15,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 744.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T018",
+              "Test_Temperature_K": 1873.15,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 14.6,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T019",
+              "Test_Temperature_K": null,
+              "Property_Type": "Dislocation_Density",
+              "Property_Value": 336000000000000.0,
+              "Property_Unit": "m^-2"
+            },
+            {
+              "Test_ID": "T020",
+              "Test_Temperature_K": null,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 7.34,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T021",
+              "Test_Temperature_K": null,
+              "Property_Type": "Relative_Density",
+              "Property_Value": 99.2,
+              "Property_Unit": "%"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "description": "--- Material 2: (Nb15Ta10W75)98.5C1.5 ---",
+      "Mat_ID": "M002",
+      "Alloy_Name_Raw": "(Nb15Ta10W75)98.5C1.5",
+      "Formula_Normalized": "(Nb15Ta10W75)98.5C1.5",
+      "Composition_JSON": {
+        "Nb": 15.0,
+        "Ta": 10.0,
+        "W": 75.0,
+        "C": 1.5
+      },
+      "Source_DOI": "",
+      "Source_File": "2-2025-Acta-Nb₁₅Ta₁₀W₇₅---添加NbC 纳米沉淀.txt",
+      "Processed_Samples": [
+        {
+          "Sample_ID": "S002_AutoExtracted",
+          "Process_Category": "AM_DED",
+          "Process_Text_For_AI": "Laser powder bed fusion (LPBF) with optimum parameters: P = 300 W, v = 690 mm/s, t = 40 μm, h = 30 μm; processed in argon atmosphere with <100 ppm oxygen; substrate was pure tungsten plate heated to reduce stress; 1.5 at.% WC powder added to Nb15Ta10W75 powders",
+          "Key_Params_JSON": {},
+          "Main_Phase": "",
+          "Microstructure_Text_For_AI": "technique_1: XRD (D8 Advance Da Vinci, Bruker Corp., USA) with Cu-Kα radiation (λ = 1.5418 Å) at 40 kV, 40 mA, scan range 20-100° at 1.5°/min; technique_2: SEM (FEI Co., Hillsboro, OR, USA) with EDS and EBSD detectors; EBSD at 20 kV with 0.1 μm scan step; technique_3: TEM (JEM-F200X, JEOL Ltd., Tokyo, Japan) at 200 kV; technique_4: 3D-APT (LEAP 5000X) at pulse repetition rate of 200 kHz and UV laser energy of 60 pJ",
+          "Has_Precipitates": false,
+          "Grain_Size_avg_um": null,
+          "Performance_Tests": [
+            {
+              "Test_ID": "T001",
+              "Test_Temperature_K": null,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1591.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T002",
+              "Test_Temperature_K": null,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 1667.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T003",
+              "Test_Temperature_K": null,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 7.4,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T004",
+              "Test_Temperature_K": null,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1615.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T005",
+              "Test_Temperature_K": null,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 1692.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T006",
+              "Test_Temperature_K": null,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 8.3,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T007",
+              "Test_Temperature_K": 1273.15,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1105.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T008",
+              "Test_Temperature_K": 1273.15,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 1602.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T009",
+              "Test_Temperature_K": 1273.15,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 16.4,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T010",
+              "Test_Temperature_K": 1473.15,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 1042.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T011",
+              "Test_Temperature_K": 1473.15,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 1513.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T012",
+              "Test_Temperature_K": 1473.15,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 15.0,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T013",
+              "Test_Temperature_K": 1673.15,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 952.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T014",
+              "Test_Temperature_K": 1673.15,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 1397.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T015",
+              "Test_Temperature_K": 1673.15,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 14.8,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T016",
+              "Test_Temperature_K": 1873.15,
+              "Property_Type": "Yield_Strength",
+              "Property_Value": 750.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T017",
+              "Test_Temperature_K": 1873.15,
+              "Property_Type": "Ultimate_Compressive_Strength",
+              "Property_Value": 957.0,
+              "Property_Unit": "MPa"
+            },
+            {
+              "Test_ID": "T018",
+              "Test_Temperature_K": 1873.15,
+              "Property_Type": "Fracture_Strain",
+              "Property_Value": 15.3,
+              "Property_Unit": "%"
+            },
+            {
+              "Test_ID": "T019",
+              "Test_Temperature_K": null,
+              "Property_Type": "Dislocation_Density",
+              "Property_Value": 396000000000000.0,
+              "Property_Unit": "m^-2"
+            },
+            {
+              "Test_ID": "T020",
+              "Test_Temperature_K": null,
+              "Property_Type": "Grain_Size",
+              "Property_Value": 6.1,
+              "Property_Unit": "μm"
+            },
+            {
+              "Test_ID": "T021",
+              "Test_Temperature_K": null,
+              "Property_Type": "NbC_precipitate_size",
+              "Property_Value": 37.2,
+              "Property_Unit": "nm"
+            },
+            {
+              "Test_ID": "T022",
+              "Test_Temperature_K": null,
+              "Property_Type": "NbC_precipitate_number_density",
+              "Property_Value": 9.7e+22,
+              "Property_Unit": "m^-3"
+            },
+            {
+              "Test_ID": "T023",
+              "Test_Temperature_K": null,
+              "Property_Type": "lattice_parameter",
+              "Property_Value": 3.22,
+              "Property_Unit": "Å"
+            },
+            {
+              "Test_ID": "T024",
+              "Test_Temperature_K": null,
+              "Property_Type": "lattice_parameter",
+              "Property_Value": 3.26,
+              "Property_Unit": "Å"
+            },
+            {
+              "Test_ID": "T025",
+              "Test_Temperature_K": null,
+              "Property_Type": "Relative_Density",
+              "Property_Value": 99.5,
+              "Property_Unit": "%"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+# Taskmaster
+.taskmaster/state.json
+.taskmaster/tasks/*.json
+
+# macOS
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# Temporary files
+*.tmp
+*.bak
+
+# Publishing/Development files (not needed in public repo)
+YOUR_NEXT_STEPS.md
+PUBLISHING_GUIDE.md
+DEVELOPER_README.md
+DISCUSSION_WELCOME.md
+SHARING_TEMPLATES.md

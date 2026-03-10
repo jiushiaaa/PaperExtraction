@@ -1,0 +1,13 @@
+{
+  "paper_name": "Powder Metallurgy（粉末冶金）",
+  "pipeline_version": "knowmat-2.0.1",
+  "materials_target_count": 6,
+  "samples_count": 18,
+  "properties_count": 83,
+  "unknown_process_count": 0,
+  "phase_filled_rate": 0.0,
+  "missing_doi": 1,
+  "needs_review": false,
+  "red_line_triggers": [],
+  "final_confidence_score": null
+}

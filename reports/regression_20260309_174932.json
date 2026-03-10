@@ -1,0 +1,137 @@
+{
+  "timestamp": "2026-03-09T17:49:32.980375",
+  "papers_compared": 1,
+  "papers_total": 1,
+  "summary": {
+    "structure": {
+      "materials_per_paper": {
+        "ai": 4.0,
+        "gt": 4.0
+      },
+      "samples_per_paper": {
+        "ai": 4.0,
+        "gt": 4.0
+      },
+      "properties_per_paper": {
+        "ai": 46.0,
+        "gt": 32.0
+      }
+    },
+    "field_accuracy": {
+      "doi_hit_rate": 0.0,
+      "main_phase_ai_filled_rate": 0.0,
+      "main_phase_match_rate": 0.0,
+      "has_precipitates_match_rate": 0.5,
+      "process_category_match_rate": 0.0,
+      "process_unknown_rate": 1.0,
+      "grain_size_ai_filled_rate": 0.0,
+      "grain_size_gt_filled_rate": 1.0
+    },
+    "temperature": {
+      "mean_offset_K": 239.671,
+      "max_offset_K": 575.15,
+      "tests_with_offset": 10
+    },
+    "composition_quality": {
+      "papers_with_invalid_elements": 0,
+      "papers_with_sum_issues": 4,
+      "papers_with_empty_composition": 0
+    }
+  },
+  "details": [
+    {
+      "paper_id": 5,
+      "ai_file": "data\\processed\\5-2024-IJP-在 FeCoCrNiMox\\5-2024-IJP-在 FeCoCrNiMox_extraction.json",
+      "gt_file": "手工标注结果\\5-data.json",
+      "structure": {
+        "materials": {
+          "ai": 4,
+          "gt": 4
+        },
+        "samples": {
+          "ai": 4,
+          "gt": 4
+        },
+        "properties": {
+          "ai": 46,
+          "gt": 32
+        }
+      },
+      "doi": {
+        "ai": "",
+        "gt": "10.1016/j.ijplas.2024.104142",
+        "match": false
+      },
+      "phases": {
+        "ai_filled_count": 0,
+        "gt_filled_count": 4,
+        "matches": 0,
+        "ai_filled_rate": 0.0,
+        "gt_filled_rate": 1.0,
+        "match_rate": 0.0
+      },
+      "precipitates": {
+        "ai_true_count": 0,
+        "gt_true_count": 2,
+        "matches": 2,
+        "match_rate": 0.5
+      },
+      "process_categories": {
+        "ai_unknown_count": 4,
+        "gt_unknown_count": 0,
+        "matches": 0,
+        "match_rate": 0.0
+      },
+      "grain_sizes": {
+        "ai_filled_count": 0,
+        "gt_filled_count": 4,
+        "ai_filled_rate": 0.0,
+        "gt_filled_rate": 1.0
+      },
+      "temperatures": {
+        "ai_filled_count": 34,
+        "gt_filled_count": 32,
+        "offsets": [
+          0.14999999999997726,
+          0.14999999999997726,
+          0.14999999999997726,
+          0.14999999999997726,
+          0.14999999999997726,
+          0.14999999999997726,
+          0.14999999999997726,
+          0.14999999999997726,
+          0.14999999999997726,
+          574.85,
+          574.85,
+          574.85,
+          0.14999999999997726,
+          575.15,
+          575.15,
+          575.15,
+          574.85,
+          574.85,
+          0.14999999999997726,
+          0.14999999999997726,
+          575.15,
+          575.15,
+          0.14999999999997726,
+          0.14999999999997726
+        ],
+        "mean_offset_K": 239.67083333333323,
+        "max_offset_K": 575.15,
+        "tests_with_offset": 10
+      },
+      "compositions": {
+        "invalid_elements_count": 0,
+        "sum_issues_count": 4,
+        "empty_count": 0,
+        "issues": [
+          "FeCoCrNiMo0(Mo0): Sum=0.0% (expected ~100%)",
+          "FeCoCrNiMo0.1(Mo1): Sum=1.0% (expected ~100%)",
+          "FeCoCrNiMo0.3(Mo3): Sum=3.0% (expected ~100%)",
+          "FeCoCrNiMo0.5(Mo5): Sum=5.0% (expected ~100%)"
+        ]
+      }
+    }
+  ]
+}

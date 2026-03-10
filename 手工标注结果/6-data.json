@@ -1,0 +1,188 @@
+{
+    "Dataset_Description": "Data extraction for FeCoCrNi and FeCoCrNiMo0.5 High Entropy Alloys fabricated via Laser Powder Bed Fusion.",
+    "Materials": [
+      {
+        "description": "--- Material 1: FeCoCrNi (Mo-0) ---",
+        "Mat_ID": "Mo-0",
+        "Alloy_Name_Raw": "FeCoCrNi",
+        "Formula_Normalized": "Fe25Co25Cr25Ni25",
+        "Composition_JSON": {
+          "Fe": 25.0,
+          "Co": 25.0,
+          "Cr": 25.0,
+          "Ni": 25.0
+        },
+        "Source_DOI": "10.1016/j.msea.2024.146413",
+        "Processed_Samples": [
+          {
+            "Sample_ID": "Mo-0_LPBF_AsBuilt",
+            "Process_Category": "Additive_Manufacturing",
+            "Process_Text_For_AI": "Fabricated by Laser Powder Bed Fusion (LPBF). Preheating temp = 120°C, Laser power = 200 W, Line spacing = 80 μm, Point spacing = 60 μm, Exposure time = 80 μs, Layer thickness = 40 μm, Rotation angle = 67°.",
+            "Key_Params_JSON": {
+              "Method": "LPBF",
+              "Preheating_Temp_C": 120,
+              "Laser_Power_W": 200,
+              "Scan_Speed_mm_s": 750,
+              "Line_Spacing_um": 80,
+              "Point_Spacing_um": 60,
+              "Layer_Thickness_um": 40
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Columnar grains with vertical growth tendency. No precipitate phase at dislocation network positions. Distinct nanoclusters of Fe, Co, Cr, and Ni formed at GBs after high-temp deformation.",
+            "Has_Precipitates": false,
+            "Grain_Size_avg_um": null,
+            "Performance_Tests": [
+              {
+                "Test_ID": "T_600C_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 396.4,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_600C_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 418.5,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_700C_Tensile",
+                "Test_Temperature_K": 973,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 258.7,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_700C_Tensile",
+                "Test_Temperature_K": 973,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 272.5,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_800C_Tensile",
+                "Test_Temperature_K": 1073,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 125.5,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_800C_Tensile",
+                "Test_Temperature_K": 1073,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 130.6,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_800C_Tensile",
+                "Test_Temperature_K": 1073,
+                "Property_Type": "Elongation",
+                "Property_Value": 5.9,
+                "Property_Unit": "%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "description": "--- Material 2: FeCoCrNiMo0.5 (Mo-5) ---",
+        "Mat_ID": "Mo-5",
+        "Alloy_Name_Raw": "FeCoCrNiMo0.5",
+        "Formula_Normalized": "Fe22.2Co22.2Cr22.2Ni22.2Mo11.1",
+        "Composition_JSON": {
+          "Fe": 22.22,
+          "Co": 22.22,
+          "Cr": 22.22,
+          "Ni": 22.22,
+          "Mo": 11.12
+        },
+        "Source_DOI": "10.1016/j.msea.2024.146413",
+        "Processed_Samples": [
+          {
+            "Sample_ID": "Mo-5_LPBF_AsBuilt",
+            "Process_Category": "Additive_Manufacturing",
+            "Process_Text_For_AI": "Fabricated by Laser Powder Bed Fusion (LPBF). Preheating temp = 120°C, Laser power = 200 W, Line spacing = 80 μm, Point spacing = 60 μm, Exposure time = 80 μs, Layer thickness = 40 μm, Rotation angle = 67°.",
+            "Key_Params_JSON": {
+              "Method": "LPBF",
+              "Preheating_Temp_C": 120,
+              "Laser_Power_W": 200,
+              "Scan_Speed_mm_s": 750,
+              "Line_Spacing_um": 80,
+              "Point_Spacing_um": 60,
+              "Layer_Thickness_um": 40
+            },
+            "Main_Phase": "FCC",
+            "Microstructure_Text_For_AI": "Refined grains compared to Mo-0. Net-like precipitate phase (sigma phase) at dislocation network positions. Sigma phase is tetragonal, matrix is FCC. At 800C tensile test, sigma phase transforms from strip-like to granular.",
+            "Has_Precipitates": true,
+            "Grain_Size_avg_um": null,
+            "Performance_Tests": [
+              {
+                "Test_ID": "T_600C_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 580.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_600C_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 795.5,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_600C_Tensile",
+                "Test_Temperature_K": 873,
+                "Property_Type": "Elongation",
+                "Property_Value": 11.2,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T_700C_Tensile",
+                "Test_Temperature_K": 973,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 480.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_700C_Tensile",
+                "Test_Temperature_K": 973,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 550.8,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_700C_Tensile",
+                "Test_Temperature_K": 973,
+                "Property_Type": "Elongation",
+                "Property_Value": 6.3,
+                "Property_Unit": "%"
+              },
+              {
+                "Test_ID": "T_800C_Tensile",
+                "Test_Temperature_K": 1073,
+                "Property_Type": "Yield_Strength",
+                "Property_Value": 192.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_800C_Tensile",
+                "Test_Temperature_K": 1073,
+                "Property_Type": "Ultimate_Tensile_Strength",
+                "Property_Value": 322.0,
+                "Property_Unit": "MPa"
+              },
+              {
+                "Test_ID": "T_800C_Tensile",
+                "Test_Temperature_K": 1073,
+                "Property_Type": "Elongation",
+                "Property_Value": 14.1,
+                "Property_Unit": "%"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
